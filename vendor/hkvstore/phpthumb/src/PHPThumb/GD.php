@@ -90,7 +90,7 @@ class GD extends PHPThumb
 
         if (@$options['isDataStream'] && @$options['format']) {
 
-            $this->oldImage = imagecreatefromstring($fileName);
+            $this->oldImage = @imagecreatefromstring($fileName);
             $this->setFormat($options['format']);
 
         } else {
@@ -100,16 +100,16 @@ class GD extends PHPThumb
 
             switch ($this->format) {
                 case 'GIF':
-                    $this->oldImage = imagecreatefromgif($this->fileName);
+                    $this->oldImage = @imagecreatefromgif($this->fileName);
                     break;
                 case 'JPG':
-                    $this->oldImage = imagecreatefromjpeg($this->fileName);
+                    $this->oldImage = @imagecreatefromjpeg($this->fileName);
                     break;
                 case 'PNG':
-                    $this->oldImage = imagecreatefrompng($this->fileName);
+                    $this->oldImage = @imagecreatefrompng($this->fileName);
                     break;
                 case 'STRING':
-                    $this->oldImage = imagecreatefromstring($this->fileName);
+                    $this->oldImage = @imagecreatefromstring($this->fileName);
                     break;
             }
 
@@ -1347,19 +1347,8 @@ class GD extends PHPThumb
      */
     protected function determineFormat()
     {
-        $formatInfo = getimagesize($this->fileName);
-
-        // non-image files will return false
-        if ($formatInfo === false) {
-            if ($this->remoteImage) {
-                throw new \Exception("Could not determine format of remote image: {$this->fileName}");
-            } else {
-                throw new \Exception("File is not a valid image: {$this->fileName}");
-            }
-        }
-
-        $mimeType = isset($formatInfo['mime']) ? $formatInfo['mime'] : null;
-
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mimeType = finfo_file($finfo, $this->fileName);
         switch ($mimeType) {
             case 'image/gif':
                 $this->format = 'GIF';
