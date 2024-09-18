@@ -8,7 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'ZipStream\\' => array($vendorDir . '/maennchen/zipstream-php/src'),
     'YaLinqo\\' => array($vendorDir . '/athari/yalinqo/YaLinqo'),
-    'Tuupola\\Middleware\\' => array($vendorDir . '/tuupola/callable-handler/src', $vendorDir . '/jimtools/jwt-auth/src'),
+    'Tuupola\\Middleware\\' => array($vendorDir . '/jimtools/jwt-auth/src', $vendorDir . '/tuupola/callable-handler/src'),
     'Tuupola\\Http\\Factory\\' => array($vendorDir . '/tuupola/http-factory/src'),
     'Slim\\HttpCache\\' => array($vendorDir . '/slim/http-cache/src'),
     'Slim\\' => array($vendorDir . '/slim/slim/Slim'),

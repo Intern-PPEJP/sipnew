@@ -218,7 +218,7 @@ $CONFIG = [
 
 	// Database connection info
 	"CONNECTION_INFO" => [
-		"DB" => ["id" => "DB", "type" => "MYSQL", "qs" => "`", "qe" => "`", "host" => "localhost", "port" => 3306, "user" => "PPEIsip", "pass" => "GoSIPP3I20", "db" => "ppei_sip20"]
+		"DB" => ["id" => "DB", "type" => "MYSQL", "qs" => "`", "qe" => "`", "host" => "localhost", "port" => 3306, "user" => "root", "pass" => "", "db" => "ppei_sip20"]
 	],
 
 	// Database error function
