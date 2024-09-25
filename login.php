@@ -91,12 +91,15 @@ loadjs.ready("head", function() {
 		background: url('images/bglogin.jpg') no-repeat center center fixed !important;
 		background-size: cover;
 		height: 100vh;
+		width: 100%;
 		margin: 0;
+		padding: 0;
 		display: flex; /* Menambahkan flexbox untuk pengaturan elemen */
 		justify-content: center; 
 		align-items: center; 
 		padding-top: 160px;
 		position: relative;
+		background-attachment: fixed;
 	}
 
 	.login_wrapper {
