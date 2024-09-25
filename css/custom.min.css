@@ -3272,7 +3272,7 @@ a.hiddenanchor {
   right: 0px;
   margin: 0px auto;
   margin-top: 5%;
-  max-width: 350px;
+  max-width: 400px;
   position: relative;
 }
 .registration_form,
@@ -3440,11 +3440,7 @@ form:after {
   margin-right: 39px;
   float: right;
 }
-.separator {
-  border-top: 1px solid #d8d8d8;
-  margin-top: 10px;
-  padding-top: 10px;
-}
+
 .button {
   background: #f7f9fa;
   background: linear-gradient(to bottom, #f7f9fa 0%, #f0f0f0 100%);
