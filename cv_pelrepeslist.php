@@ -317,13 +317,14 @@ loadjs.ready(["fcv_pelrepeslistsrch"], function() {
 <input type="hidden" name="z_tahun_pelatihan" id="z_tahun_pelatihan" value="=">
 </span>
 		<span id="el_cv_pelrepes_tahun_pelatihan" class="ew-search-field">
-<input type="text" data-table="cv_pelrepes" data-field="x_tahun_pelatihan" name="x_tahun_pelatihan" id="x_tahun_pelatihan" size="4" placeholder="<?php echo HtmlEncode($cv_pelrepes_list->tahun_pelatihan->getPlaceHolder()) ?>" value="<?php echo $cv_pelrepes_list->tahun_pelatihan->EditValue ?>"<?php echo $cv_pelrepes_list->tahun_pelatihan->editAttributes() ?>>
+<input type="text" data-table="cv_pelrepes" data-field="x_tahun_pelatihan" name="x_tahun_pelatihan" id="x_tahun_pelatihan" size="13" placeholder="<?php echo HtmlEncode($cv_pelrepes_list->tahun_pelatihan->getPlaceHolder()) ?>" value=""<?php echo $cv_pelrepes_list->tahun_pelatihan->editAttributes() ?>>
 </span>
 	</div>
 	<?php if ($cv_pelrepes_list->SearchColumnCount % $cv_pelrepes_list->SearchFieldsPerRow == 0) { ?>
 </div>
 	<?php } ?>
 <?php } ?>
+
 
 	<?php if ($cv_pelrepes_list->SearchColumnCount % $cv_pelrepes_list->SearchFieldsPerRow > 0) { ?>
 </div>
