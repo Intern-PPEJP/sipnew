@@ -161,7 +161,7 @@ ew.ready("head", ["<?php echo $RELATIVE_PATH ?>ckeditor/ckeditor.js", "<?php ech
 .navbar-dark .navbar-nav .nav-link { color: rgb(244, 246, 249) !important;}
 .ew-grid { width: 100%; }
 #ew-menu { padding-bottom: 33px; }
-.tt-menu { color: #0062cc; } // input dropdown 
+.tt-menu { color: #0062cc; } /*input dropdown*/ 
 </style>
 <script>
 loadjs.ready("head", function() {
@@ -281,24 +281,24 @@ function checkTime(i) {
 		<div class="dropdown-divider"></div>
 		<div class="text-nowrap p-3">
 			{{if hasPersonalData}}
-			<a class="btn btn-default" href="#" onclick="{{:personalDataUrl}}">{{:personalDataText}}</a>
+			<a class="btn btn-default" href="#" onclick="{{personalDataUrl}}">{{personalDataText}}</a>
 			{{/if}}
 			{{if canChangePassword}}
-			<a class="btn btn-default" href="#" onclick="{{:changePasswordUrl}}">{{:changePasswordText}}</a>
+			<a class="btn btn-default" href="#" onclick="{{changePasswordUrl}}">{{changePasswordText}}</a>
 			{{/if}}
 		</div>
 		{{/if}}
 		{{if canLogout}}
 		<div class="dropdown-divider"></div>
 		<div class="dropdown-footer p-2 text-right">
-			<a class="btn btn-default" href="#" onclick="{{:logoutUrl}}">{{:logoutText}}</a>
+			<a class="btn btn-default" href="#" onclick="{{logoutUrl}}">{{logoutText}}</a>
 		</div>
 		{{/if}}
 	</div>
 <li>
 {{else}}
 	{{if canLogin}}
-<li class="nav-item"><a class="nav-link" href="#" onclick="{{:loginUrl}}">{{:loginText}}</a></li>
+<li class="nav-item"><a class="nav-link" href="#" onclick="{{loginUrl}}">{{loginText}}</a></li>
 	{{/if}}
 {{/if}}
 </script>
