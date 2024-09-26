@@ -217,7 +217,7 @@ loadjs.ready("head", function() {
 </div>
 		<div class="login-footer">
             <p>Kementerian Perdagangan</p>
-            <p>SISTEM INFORMASI PPEJP © <?php echo date("Y"); ?> All Rights Reserved</p>
+            <p>SISTEM INFORMASI PPEJP © <?php echo date("Y"); ?> All Rights Reserved.</p>
         </div>
 </body>
 </div>
