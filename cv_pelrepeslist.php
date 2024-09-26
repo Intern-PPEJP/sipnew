@@ -118,10 +118,33 @@ loadjs.ready("head", function() {
 <div class="clearfix"></div>
 </div>
 
+<?php } ?>
+
+
+<?php
+$cv_pelrepes_list->renderOtherOptions();
+?>
+<?php if ($Security->CanSearch()) { ?>
+<?php if (!$cv_pelrepes_list->isExport() && !$cv_pelrepes->CurrentAction) { ?>
+
+
+<form name="fcv_pelrepeslistsrch" id="fcv_pelrepeslistsrch" class="form-inline ew-form ew-ext-search-form" action="<?php echo CurrentPageName() ?>">
+<div id="fcv_pelrepeslistsrch-search-panel" class="<?php echo $cv_pelrepes_list->SearchPanelClass ?>">
+<input type="hidden" name="cmd" value="search">
+<input type="hidden" name="t" value="cv_pelrepes">
+	<div class="ew-extended-search">
+
+<?php
+// Render search row
+$cv_pelrepes->RowType = ROWTYPE_SEARCH;
+$cv_pelrepes->resetAttributes();
+$cv_pelrepes_list->renderRow();
+?>
+
 <style>
 	.ew-cell {
     display: flex;
-    align-items: center; /* Untuk menyejajarkan label dan input secara vertikal */
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
     margin-bottom: 10px; /* Tambahkan margin antar elemen */
 }
 
@@ -129,6 +152,7 @@ loadjs.ready("head", function() {
     width: 150px; /* Atur lebar label agar seragam */
     text-align: left !important;
     padding-right: 10px;
+	justify-content: left !important;
 }
 
 .ew-search-field input,
@@ -141,26 +165,6 @@ loadjs.ready("head", function() {
 }
 
 </style>
-
-<?php } ?>
-
-<?php
-$cv_pelrepes_list->renderOtherOptions();
-?>
-<?php if ($Security->CanSearch()) { ?>
-<?php if (!$cv_pelrepes_list->isExport() && !$cv_pelrepes->CurrentAction) { ?>
-<form name="fcv_pelrepeslistsrch" id="fcv_pelrepeslistsrch" class="form-inline ew-form ew-ext-search-form" action="<?php echo CurrentPageName() ?>">
-<div id="fcv_pelrepeslistsrch-search-panel" class="<?php echo $cv_pelrepes_list->SearchPanelClass ?>">
-<input type="hidden" name="cmd" value="search">
-<input type="hidden" name="t" value="cv_pelrepes">
-	<div class="ew-extended-search">
-<?php
-
-// Render search row
-$cv_pelrepes->RowType = ROWTYPE_SEARCH;
-$cv_pelrepes->resetAttributes();
-$cv_pelrepes_list->renderRow();
-?>
 
 
 <?php if ($cv_pelrepes_list->kdjudul->Visible) { // kdjudul ?>
@@ -201,6 +205,8 @@ loadjs.ready(["fcv_pelrepeslistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
+
 <?php if ($cv_pelrepes_list->kdprop->Visible) { // kdprop ?>
 	<?php
 		$cv_pelrepes_list->SearchColumnCount++;
@@ -231,6 +237,8 @@ loadjs.ready(["fcv_pelrepeslistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
+
 <?php if ($cv_pelrepes_list->kdkota->Visible) { // kdkota ?>
 	<?php
 		$cv_pelrepes_list->SearchColumnCount++;
@@ -260,6 +268,8 @@ loadjs.ready(["fcv_pelrepeslistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
+
 <?php if ($cv_pelrepes_list->statuspel->Visible) { // statuspel ?>
 	<?php
 		$cv_pelrepes_list->SearchColumnCount++;
@@ -288,6 +298,8 @@ loadjs.ready(["fcv_pelrepeslistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
+
 <?php if ($cv_pelrepes_list->tahun_pelatihan->Visible) { // tahun_pelatihan ?>
 	<?php
 		$cv_pelrepes_list->SearchColumnCount++;
