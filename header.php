@@ -161,7 +161,7 @@ ew.ready("head", ["<?php echo $RELATIVE_PATH ?>ckeditor/ckeditor.js", "<?php ech
 .navbar-dark .navbar-nav .nav-link { color: rgb(244, 246, 249) !important;}
 .ew-grid { width: 100%; }
 #ew-menu { padding-bottom: 33px; }
-.tt-menu { color: #0062cc; } // input dropdown 
+.tt-menu { color: #0062cc; } /*input dropdown*/ 
 </style>
 <script>
 loadjs.ready("head", function() {
