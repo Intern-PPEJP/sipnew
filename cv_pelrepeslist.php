@@ -143,6 +143,7 @@ loadjs.ready("head", function() {
 </style>
 
 <?php } ?>
+
 <?php
 $cv_pelrepes_list->renderOtherOptions();
 ?>
@@ -160,6 +161,8 @@ $cv_pelrepes->RowType = ROWTYPE_SEARCH;
 $cv_pelrepes->resetAttributes();
 $cv_pelrepes_list->renderRow();
 ?>
+
+
 <?php if ($cv_pelrepes_list->kdjudul->Visible) { // kdjudul ?>
 	<?php
 		$cv_pelrepes_list->SearchColumnCount++;
