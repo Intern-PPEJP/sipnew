@@ -117,6 +117,31 @@ loadjs.ready("head", function() {
 <?php } ?>
 <div class="clearfix"></div>
 </div>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: center; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 150px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
 <?php } ?>
 <?php
 $cv_pelrepes_list->renderOtherOptions();
@@ -146,33 +171,18 @@ $cv_pelrepes_list->renderRow();
 		}
 	 ?>
 	<div id="xsc_kdjudul" class="ew-cell form-group">
-		<label class="ew-search-caption ew-label"><?php echo $cv_pelrepes_list->kdjudul->caption() ?></label>
-		<span class="ew-search-operator">
-<?php echo $Language->phrase("=") ?>
-<input type="hidden" name="z_kdjudul" id="z_kdjudul" value="=">
-</span>
-		<span id="el_cv_pelrepes_kdjudul" class="ew-search-field">
-<?php
-$onchange = $cv_pelrepes_list->kdjudul->EditAttrs->prepend("onchange", "");
-$onchange = ($onchange) ? ' onchange="' . JsEncode($onchange) . '"' : '';
-$cv_pelrepes_list->kdjudul->EditAttrs["onchange"] = "";
-?>
-<span id="as_x_kdjudul">
-	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($cv_pelrepes_list->kdjudul->EditValue) ?>" size="100" placeholder="<?php echo HtmlEncode($cv_pelrepes_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($cv_pelrepes_list->kdjudul->getPlaceHolder()) ?>"<?php echo $cv_pelrepes_list->kdjudul->editAttributes() ?>>
-</span>
-<input type="hidden" data-table="cv_pelrepes" data-field="x_kdjudul" data-value-separator="<?php echo $cv_pelrepes_list->kdjudul->displayValueSeparatorAttribute() ?>" name="x_kdjudul" id="x_kdjudul" value="<?php echo HtmlEncode($cv_pelrepes_list->kdjudul->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
-<script>
-loadjs.ready(["fcv_pelrepeslistsrch"], function() {
-	fcv_pelrepeslistsrch.createAutoSuggest({"id":"x_kdjudul","forceSelect":false,"minWidth":"650px","maxHeight":"333px"});
-});
-</script>
-<?php echo $cv_pelrepes_list->kdjudul->Lookup->getParamTag($cv_pelrepes_list, "p_x_kdjudul") ?>
-</span>
+		<label class="ew-search-caption ew-label">
+			<?php echo $cv_pelrepes_list->kdjudul->caption() ?>
+		</label>
+		<span class="ew-search-field">
+			<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($cv_pelrepes_list->kdjudul->EditValue) ?>" size="60" placeholder="<?php echo HtmlEncode($cv_pelrepes_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($cv_pelrepes_list->kdjudul->getPlaceHolder()) ?>"<?php echo $cv_pelrepes_list->kdjudul->editAttributes() ?>>
+		</span>
 	</div>
 	<?php if ($cv_pelrepes_list->SearchColumnCount % $cv_pelrepes_list->SearchFieldsPerRow == 0) { ?>
 </div>
 	<?php } ?>
 <?php } ?>
+
 <?php if ($cv_pelrepes_list->kdprop->Visible) { // kdprop ?>
 	<?php
 		$cv_pelrepes_list->SearchColumnCount++;
@@ -185,24 +195,19 @@ loadjs.ready(["fcv_pelrepeslistsrch"], function() {
 	 ?>
 	<div id="xsc_kdprop" class="ew-cell form-group">
 		<label for="x_kdprop" class="ew-search-caption ew-label"><?php echo $cv_pelrepes_list->kdprop->caption() ?></label>
-		<span class="ew-search-operator">
-<?php echo $Language->phrase("=") ?>
-<input type="hidden" name="z_kdprop" id="z_kdprop" value="=">
-</span>
-		<span id="el_cv_pelrepes_kdprop" class="ew-search-field">
-<?php $cv_pelrepes_list->kdprop->EditAttrs->prepend("onchange", "ew.updateOptions.call(this);"); ?>
-<div class="input-group">
-	<select class="custom-select ew-custom-select" data-table="cv_pelrepes" data-field="x_kdprop" data-value-separator="<?php echo $cv_pelrepes_list->kdprop->displayValueSeparatorAttribute() ?>" id="x_kdprop" name="x_kdprop"<?php echo $cv_pelrepes_list->kdprop->editAttributes() ?>>
-			<?php echo $cv_pelrepes_list->kdprop->selectOptionListHtml("x_kdprop") ?>
-		</select>
-</div>
-<?php echo $cv_pelrepes_list->kdprop->Lookup->getParamTag($cv_pelrepes_list, "p_x_kdprop") ?>
-</span>
+		<span class="ew-search-field">
+			<div class="input-group">
+				<select class="custom-select ew-custom-select" data-table="cv_pelrepes" data-field="x_kdprop" id="x_kdprop" name="x_kdprop"<?php echo $cv_pelrepes_list->kdprop->editAttributes() ?>>
+					<?php echo $cv_pelrepes_list->kdprop->selectOptionListHtml("x_kdprop") ?>
+				</select>
+			</div>
+		</span>
 	</div>
 	<?php if ($cv_pelrepes_list->SearchColumnCount % $cv_pelrepes_list->SearchFieldsPerRow == 0) { ?>
 </div>
 	<?php } ?>
 <?php } ?>
+
 <?php if ($cv_pelrepes_list->kdkota->Visible) { // kdkota ?>
 	<?php
 		$cv_pelrepes_list->SearchColumnCount++;
@@ -215,23 +220,19 @@ loadjs.ready(["fcv_pelrepeslistsrch"], function() {
 	 ?>
 	<div id="xsc_kdkota" class="ew-cell form-group">
 		<label for="x_kdkota" class="ew-search-caption ew-label"><?php echo $cv_pelrepes_list->kdkota->caption() ?></label>
-		<span class="ew-search-operator">
-<?php echo $Language->phrase("=") ?>
-<input type="hidden" name="z_kdkota" id="z_kdkota" value="=">
-</span>
-		<span id="el_cv_pelrepes_kdkota" class="ew-search-field">
-<div class="input-group">
-	<select class="custom-select ew-custom-select" data-table="cv_pelrepes" data-field="x_kdkota" data-value-separator="<?php echo $cv_pelrepes_list->kdkota->displayValueSeparatorAttribute() ?>" id="x_kdkota" name="x_kdkota"<?php echo $cv_pelrepes_list->kdkota->editAttributes() ?>>
-			<?php echo $cv_pelrepes_list->kdkota->selectOptionListHtml("x_kdkota") ?>
-		</select>
-</div>
-<?php echo $cv_pelrepes_list->kdkota->Lookup->getParamTag($cv_pelrepes_list, "p_x_kdkota") ?>
-</span>
+		<span class="ew-search-field">
+			<div class="input-group">
+				<select class="custom-select ew-custom-select" data-table="cv_pelrepes" data-field="x_kdkota" id="x_kdkota" name="x_kdkota"<?php echo $cv_pelrepes_list->kdkota->editAttributes() ?>>
+					<?php echo $cv_pelrepes_list->kdkota->selectOptionListHtml("x_kdkota") ?>
+				</select>
+			</div>
+		</span>
 	</div>
 	<?php if ($cv_pelrepes_list->SearchColumnCount % $cv_pelrepes_list->SearchFieldsPerRow == 0) { ?>
 </div>
 	<?php } ?>
 <?php } ?>
+
 <?php if ($cv_pelrepes_list->statuspel->Visible) { // statuspel ?>
 	<?php
 		$cv_pelrepes_list->SearchColumnCount++;
@@ -244,22 +245,19 @@ loadjs.ready(["fcv_pelrepeslistsrch"], function() {
 	 ?>
 	<div id="xsc_statuspel" class="ew-cell form-group">
 		<label for="x_statuspel" class="ew-search-caption ew-label"><?php echo $cv_pelrepes_list->statuspel->caption() ?></label>
-		<span class="ew-search-operator">
-<?php echo $Language->phrase("=") ?>
-<input type="hidden" name="z_statuspel" id="z_statuspel" value="=">
-</span>
-		<span id="el_cv_pelrepes_statuspel" class="ew-search-field">
-<div class="input-group">
-	<select class="custom-select ew-custom-select" data-table="cv_pelrepes" data-field="x_statuspel" data-value-separator="<?php echo $cv_pelrepes_list->statuspel->displayValueSeparatorAttribute() ?>" id="x_statuspel" name="x_statuspel"<?php echo $cv_pelrepes_list->statuspel->editAttributes() ?>>
-			<?php echo $cv_pelrepes_list->statuspel->selectOptionListHtml("x_statuspel") ?>
-		</select>
-</div>
-</span>
+		<span class="ew-search-field">
+			<div class="input-group">
+				<select class="custom-select ew-custom-select" data-table="cv_pelrepes" data-field="x_statuspel" id="x_statuspel" name="x_statuspel"<?php echo $cv_pelrepes_list->statuspel->editAttributes() ?>>
+					<?php echo $cv_pelrepes_list->statuspel->selectOptionListHtml("x_statuspel") ?>
+				</select>
+			</div>
+		</span>
 	</div>
 	<?php if ($cv_pelrepes_list->SearchColumnCount % $cv_pelrepes_list->SearchFieldsPerRow == 0) { ?>
 </div>
 	<?php } ?>
 <?php } ?>
+
 <?php if ($cv_pelrepes_list->tahun_pelatihan->Visible) { // tahun_pelatihan ?>
 	<?php
 		$cv_pelrepes_list->SearchColumnCount++;
@@ -272,25 +270,24 @@ loadjs.ready(["fcv_pelrepeslistsrch"], function() {
 	 ?>
 	<div id="xsc_tahun_pelatihan" class="ew-cell form-group">
 		<label for="x_tahun_pelatihan" class="ew-search-caption ew-label"><?php echo $cv_pelrepes_list->tahun_pelatihan->caption() ?></label>
-		<span class="ew-search-operator">
-<?php echo $Language->phrase("=") ?>
-<input type="hidden" name="z_tahun_pelatihan" id="z_tahun_pelatihan" value="=">
-</span>
-		<span id="el_cv_pelrepes_tahun_pelatihan" class="ew-search-field">
-<input type="text" data-table="cv_pelrepes" data-field="x_tahun_pelatihan" name="x_tahun_pelatihan" id="x_tahun_pelatihan" size="4" placeholder="<?php echo HtmlEncode($cv_pelrepes_list->tahun_pelatihan->getPlaceHolder()) ?>" value="<?php echo $cv_pelrepes_list->tahun_pelatihan->EditValue ?>"<?php echo $cv_pelrepes_list->tahun_pelatihan->editAttributes() ?>>
-</span>
+		<span class="ew-search-field">
+			<input type="text" class="form-control" data-table="cv_pelrepes" data-field="x_tahun_pelatihan" name="x_tahun_pelatihan" id="x_tahun_pelatihan" size="4" placeholder="<?php echo HtmlEncode($cv_pelrepes_list->tahun_pelatihan->getPlaceHolder()) ?>" value="<?php echo $cv_pelrepes_list->tahun_pelatihan->EditValue ?>"<?php echo $cv_pelrepes_list->tahun_pelatihan->editAttributes() ?>>
+		</span>
 	</div>
 	<?php if ($cv_pelrepes_list->SearchColumnCount % $cv_pelrepes_list->SearchFieldsPerRow == 0) { ?>
 </div>
 	<?php } ?>
 <?php } ?>
+
 	<?php if ($cv_pelrepes_list->SearchColumnCount % $cv_pelrepes_list->SearchFieldsPerRow > 0) { ?>
 </div>
 	<?php } ?>
+
+
 <div id="xsr_<?php echo $cv_pelrepes_list->SearchRowCount + 1 ?>" class="ew-row d-sm-flex">
 	<button class="btn btn-primary" name="btn-submit" id="btn-submit" type="submit"><?php echo $Language->phrase("SearchBtn") ?></button>
 </div>
-	</div><!-- /.ew-extended-search -->
+</div><!-- /.ew-extended-search -->
 </div><!-- /.ew-search-panel -->
 </form>
 <?php } ?>
