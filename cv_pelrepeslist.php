@@ -190,7 +190,7 @@ $onchange = ($onchange) ? ' onchange="' . JsEncode($onchange) . '"' : '';
 $cv_pelrepes_list->kdjudul->EditAttrs["onchange"] = "";
 ?>
 <span id="as_x_kdjudul">
-	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($cv_pelrepes_list->kdjudul->EditValue) ?>" size="60" placeholder="<?php echo HtmlEncode($cv_pelrepes_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($cv_pelrepes_list->kdjudul->getPlaceHolder()) ?>"<?php echo $cv_pelrepes_list->kdjudul->editAttributes() ?>>
+	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($cv_pelrepes_list->kdjudul->EditValue) ?>" size="50" placeholder="<?php echo HtmlEncode($cv_pelrepes_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($cv_pelrepes_list->kdjudul->getPlaceHolder()) ?>"<?php echo $cv_pelrepes_list->kdjudul->editAttributes() ?>>
 </span>
 <input type="hidden" data-table="cv_pelrepes" data-field="x_kdjudul" data-value-separator="<?php echo $cv_pelrepes_list->kdjudul->displayValueSeparatorAttribute() ?>" name="x_kdjudul" id="x_kdjudul" value="<?php echo HtmlEncode($cv_pelrepes_list->kdjudul->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
 <script>
