@@ -113,11 +113,13 @@ loadjs.ready("head", function() {
 <div class="clearfix"></div>
 </div>
 <?php } ?>
+
 <?php
 $t_perusahaan_list->renderOtherOptions();
 ?>
 <?php if ($Security->CanSearch()) { ?>
 <?php if (!$t_perusahaan_list->isExport() && !$t_perusahaan->CurrentAction) { ?>
+
 <form name="ft_perusahaanlistsrch" id="ft_perusahaanlistsrch" class="form-inline ew-form ew-ext-search-form" action="<?php echo CurrentPageName() ?>">
 <div id="ft_perusahaanlistsrch-search-panel" class="<?php echo $t_perusahaan_list->SearchPanelClass ?>">
 <input type="hidden" name="cmd" value="search">
@@ -130,6 +132,32 @@ $t_perusahaan->RowType = ROWTYPE_SEARCH;
 $t_perusahaan->resetAttributes();
 $t_perusahaan_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 150px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
 <?php if ($t_perusahaan_list->idp->Visible) { // idp ?>
 	<?php
 		$t_perusahaan_list->SearchColumnCount++;
@@ -153,7 +181,7 @@ $onchange = ($onchange) ? ' onchange="' . JsEncode($onchange) . '"' : '';
 $t_perusahaan_list->idp->EditAttrs["onchange"] = "";
 ?>
 <span id="as_x_idp">
-	<input type="text" class="form-control" name="sv_x_idp" id="sv_x_idp" value="<?php echo RemoveHtml($t_perusahaan_list->idp->EditValue) ?>" size="75" maxlength="25" placeholder="<?php echo HtmlEncode($t_perusahaan_list->idp->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_perusahaan_list->idp->getPlaceHolder()) ?>"<?php echo $t_perusahaan_list->idp->editAttributes() ?>>
+	<input type="text" class="form-control" name="sv_x_idp" id="sv_x_idp" value="<?php echo RemoveHtml($t_perusahaan_list->idp->EditValue) ?>" size="50" maxlength="25" placeholder="<?php echo HtmlEncode($t_perusahaan_list->idp->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_perusahaan_list->idp->getPlaceHolder()) ?>"<?php echo $t_perusahaan_list->idp->editAttributes() ?>>
 </span>
 <input type="hidden" data-table="t_perusahaan" data-field="x_idp" data-value-separator="<?php echo $t_perusahaan_list->idp->displayValueSeparatorAttribute() ?>" name="x_idp" id="x_idp" value="<?php echo HtmlEncode($t_perusahaan_list->idp->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
 <script>
