@@ -86,6 +86,7 @@ loadjs.ready("head", function() {
 	loadjs.done("ft_pesertalistsrch");
 });
 </script>
+
 <script>
 ew.ready("head", "js/ewfixedheadertable.js", "fixedheadertable");
 </script>
@@ -102,8 +103,11 @@ loadjs.ready("head", function() {
 
 });
 </script>
+
 <?php } ?>
+
 <?php if (!$t_peserta_list->isExport()) { ?>
+
 <div class="btn-toolbar ew-toolbar">
 <?php if ($t_peserta_list->TotalRecords > 0 && $t_peserta_list->ExportOptions->visible()) { ?>
 <?php $t_peserta_list->ExportOptions->render("body") ?>
@@ -119,8 +123,11 @@ loadjs.ready("head", function() {
 <?php } ?>
 <div class="clearfix"></div>
 </div>
+
 <?php } ?>
+
 <?php if (!$t_peserta_list->isExport() || Config("EXPORT_MASTER_RECORD") && $t_peserta_list->isExport("print")) { ?>
+
 <?php
 if ($t_peserta_list->DbMasterFilter != "" && $t_peserta->getCurrentMasterTable() == "t_perusahaan") {
 	if ($t_peserta_list->MasterRecordExists) {
@@ -128,6 +135,7 @@ if ($t_peserta_list->DbMasterFilter != "" && $t_peserta->getCurrentMasterTable()
 	}
 }
 ?>
+
 <?php
 if ($t_peserta_list->DbMasterFilter != "" && $t_peserta->getCurrentMasterTable() == "t_kota") {
 	if ($t_peserta_list->MasterRecordExists) {
@@ -135,6 +143,7 @@ if ($t_peserta_list->DbMasterFilter != "" && $t_peserta->getCurrentMasterTable()
 	}
 }
 ?>
+
 <?php
 if ($t_peserta_list->DbMasterFilter != "" && $t_peserta->getCurrentMasterTable() == "t_prop") {
 	if ($t_peserta_list->MasterRecordExists) {
@@ -142,24 +151,54 @@ if ($t_peserta_list->DbMasterFilter != "" && $t_peserta->getCurrentMasterTable()
 	}
 }
 ?>
+
 <?php } ?>
+
 <?php
 $t_peserta_list->renderOtherOptions();
+
 ?>
 <?php if ($Security->CanSearch()) { ?>
+
 <?php if (!$t_peserta_list->isExport() && !$t_peserta->CurrentAction) { ?>
+
 <form name="ft_pesertalistsrch" id="ft_pesertalistsrch" class="form-inline ew-form ew-ext-search-form" action="<?php echo CurrentPageName() ?>">
 <div id="ft_pesertalistsrch-search-panel" class="<?php echo $t_peserta_list->SearchPanelClass ?>">
 <input type="hidden" name="cmd" value="search">
 <input type="hidden" name="t" value="t_peserta">
 	<div class="ew-extended-search">
-<?php
 
+<?php
 // Render search row
 $t_peserta->RowType = ROWTYPE_SEARCH;
 $t_peserta->resetAttributes();
 $t_peserta_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 150px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+</style>
+
 <?php if ($t_peserta_list->id->Visible) { // id ?>
 	<?php
 		$t_peserta_list->SearchColumnCount++;
@@ -186,11 +225,13 @@ $t_peserta_list->id->EditAttrs["onchange"] = "";
 	<input type="text" class="form-control" name="sv_x_id" id="sv_x_id" value="<?php echo RemoveHtml($t_peserta_list->id->EditValue) ?>" size="50" placeholder="<?php echo HtmlEncode($t_peserta_list->id->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_peserta_list->id->getPlaceHolder()) ?>"<?php echo $t_peserta_list->id->editAttributes() ?>>
 </span>
 <input type="hidden" data-table="t_peserta" data-field="x_id" data-value-separator="<?php echo $t_peserta_list->id->displayValueSeparatorAttribute() ?>" name="x_id" id="x_id" value="<?php echo HtmlEncode($t_peserta_list->id->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
+
 <script>
 loadjs.ready(["ft_pesertalistsrch"], function() {
 	ft_pesertalistsrch.createAutoSuggest({"id":"x_id","forceSelect":true,"minWidth":"525px","maxHeight":"333px"});
 });
 </script>
+
 <?php echo $t_peserta_list->id->Lookup->getParamTag($t_peserta_list, "p_x_id") ?>
 </span>
 	</div>
@@ -198,9 +239,11 @@ loadjs.ready(["ft_pesertalistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
 	<?php if ($t_peserta_list->SearchColumnCount % $t_peserta_list->SearchFieldsPerRow > 0) { ?>
 </div>
 	<?php } ?>
+
 <div id="xsr_<?php echo $t_peserta_list->SearchRowCount + 1 ?>" class="ew-row d-sm-flex">
 	<button class="btn btn-primary" name="btn-submit" id="btn-submit" type="submit"><?php echo $Language->phrase("SearchBtn") ?></button>
 </div>
