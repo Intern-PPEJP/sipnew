@@ -34,6 +34,7 @@ $t_rpkerjasama_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$t_rpkerjasama_list->isExport()) { ?>
+
 <script>
 var ft_rpkerjasamalist, currentPageID;
 loadjs.ready("head", function() {
@@ -91,6 +92,7 @@ loadjs.ready("head", function() {
 	loadjs.done("ft_rpkerjasamalistsrch");
 });
 </script>
+
 <script>
 ew.ready("head", "js/ewfixedheadertable.js", "fixedheadertable");
 </script>
@@ -102,7 +104,9 @@ loadjs.ready("head", function() {
 
 });
 </script>
+
 <?php } ?>
+
 <?php if (!$t_rpkerjasama_list->isExport()) { ?>
 <div class="btn-toolbar ew-toolbar">
 <?php if ($t_rpkerjasama_list->TotalRecords > 0 && $t_rpkerjasama_list->ExportOptions->visible()) { ?>
@@ -137,6 +141,71 @@ $t_rpkerjasama->RowType = ROWTYPE_SEARCH;
 $t_rpkerjasama->resetAttributes();
 $t_rpkerjasama_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 150px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
+<?php if ($t_rpkerjasama_list->kerjasama->Visible) { // kerjasama ?>
+	<?php
+		$t_rpkerjasama_list->SearchColumnCount++;
+		if (($t_rpkerjasama_list->SearchColumnCount - 1) % $t_rpkerjasama_list->SearchFieldsPerRow == 0) {
+			$t_rpkerjasama_list->SearchRowCount++;
+	?>
+<div id="xsr_<?php echo $t_rpkerjasama_list->SearchRowCount ?>" class="ew-row d-sm-flex">
+	<?php
+		}
+	 ?>
+	<div id="xsc_kerjasama" class="ew-cell form-group">
+		<label class="ew-search-caption ew-label"><?php echo $t_rpkerjasama_list->kerjasama->caption() ?></label>
+		<span class="ew-search-operator">
+<?php echo $Language->phrase("=") ?>
+<input type="hidden" name="z_kerjasama" id="z_kerjasama" value="=">
+</span>
+		<span id="el_t_rpkerjasama_kerjasama" class="ew-search-field">
+<?php
+$onchange = $t_rpkerjasama_list->kerjasama->EditAttrs->prepend("onchange", "");
+$onchange = ($onchange) ? ' onchange="' . JsEncode($onchange) . '"' : '';
+$t_rpkerjasama_list->kerjasama->EditAttrs["onchange"] = "";
+?>
+<span id="as_x_kerjasama">
+	<input type="text" class="form-control" name="sv_x_kerjasama" id="sv_x_kerjasama" value="<?php echo RemoveHtml($t_rpkerjasama_list->kerjasama->EditValue) ?>" size="50" maxlength="30" placeholder="<?php echo HtmlEncode($t_rpkerjasama_list->kerjasama->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_rpkerjasama_list->kerjasama->getPlaceHolder()) ?>"<?php echo $t_rpkerjasama_list->kerjasama->editAttributes() ?>>
+</span>
+<input type="hidden" data-table="t_rpkerjasama" data-field="x_kerjasama" data-value-separator="<?php echo $t_rpkerjasama_list->kerjasama->displayValueSeparatorAttribute() ?>" name="x_kerjasama" id="x_kerjasama" value="<?php echo HtmlEncode($t_rpkerjasama_list->kerjasama->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
+<script>
+loadjs.ready(["ft_rpkerjasamalistsrch"], function() {
+	ft_rpkerjasamalistsrch.createAutoSuggest({"id":"x_kerjasama","forceSelect":true,"minWidth":"525px","maxHeight":"333px"});
+});
+</script>
+<?php echo $t_rpkerjasama_list->kerjasama->Lookup->getParamTag($t_rpkerjasama_list, "p_x_kerjasama") ?>
+</span>
+	</div>
+	<?php if ($t_rpkerjasama_list->SearchColumnCount % $t_rpkerjasama_list->SearchFieldsPerRow == 0) { ?>
+</div>
+	<?php } ?>
+<?php } ?>
+
 <?php if ($t_rpkerjasama_list->jenispel->Visible) { // jenispel ?>
 	<?php
 		$t_rpkerjasama_list->SearchColumnCount++;
@@ -165,44 +234,7 @@ $t_rpkerjasama_list->renderRow();
 </div>
 	<?php } ?>
 <?php } ?>
-<?php if ($t_rpkerjasama_list->kerjasama->Visible) { // kerjasama ?>
-	<?php
-		$t_rpkerjasama_list->SearchColumnCount++;
-		if (($t_rpkerjasama_list->SearchColumnCount - 1) % $t_rpkerjasama_list->SearchFieldsPerRow == 0) {
-			$t_rpkerjasama_list->SearchRowCount++;
-	?>
-<div id="xsr_<?php echo $t_rpkerjasama_list->SearchRowCount ?>" class="ew-row d-sm-flex">
-	<?php
-		}
-	 ?>
-	<div id="xsc_kerjasama" class="ew-cell form-group">
-		<label class="ew-search-caption ew-label"><?php echo $t_rpkerjasama_list->kerjasama->caption() ?></label>
-		<span class="ew-search-operator">
-<?php echo $Language->phrase("=") ?>
-<input type="hidden" name="z_kerjasama" id="z_kerjasama" value="=">
-</span>
-		<span id="el_t_rpkerjasama_kerjasama" class="ew-search-field">
-<?php
-$onchange = $t_rpkerjasama_list->kerjasama->EditAttrs->prepend("onchange", "");
-$onchange = ($onchange) ? ' onchange="' . JsEncode($onchange) . '"' : '';
-$t_rpkerjasama_list->kerjasama->EditAttrs["onchange"] = "";
-?>
-<span id="as_x_kerjasama">
-	<input type="text" class="form-control" name="sv_x_kerjasama" id="sv_x_kerjasama" value="<?php echo RemoveHtml($t_rpkerjasama_list->kerjasama->EditValue) ?>" size="100" maxlength="30" placeholder="<?php echo HtmlEncode($t_rpkerjasama_list->kerjasama->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_rpkerjasama_list->kerjasama->getPlaceHolder()) ?>"<?php echo $t_rpkerjasama_list->kerjasama->editAttributes() ?>>
-</span>
-<input type="hidden" data-table="t_rpkerjasama" data-field="x_kerjasama" data-value-separator="<?php echo $t_rpkerjasama_list->kerjasama->displayValueSeparatorAttribute() ?>" name="x_kerjasama" id="x_kerjasama" value="<?php echo HtmlEncode($t_rpkerjasama_list->kerjasama->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
-<script>
-loadjs.ready(["ft_rpkerjasamalistsrch"], function() {
-	ft_rpkerjasamalistsrch.createAutoSuggest({"id":"x_kerjasama","forceSelect":true,"minWidth":"525px","maxHeight":"333px"});
-});
-</script>
-<?php echo $t_rpkerjasama_list->kerjasama->Lookup->getParamTag($t_rpkerjasama_list, "p_x_kerjasama") ?>
-</span>
-	</div>
-	<?php if ($t_rpkerjasama_list->SearchColumnCount % $t_rpkerjasama_list->SearchFieldsPerRow == 0) { ?>
-</div>
-	<?php } ?>
-<?php } ?>
+
 <?php if ($t_rpkerjasama_list->tahun_rencana->Visible) { // tahun_rencana ?>
 	<?php
 		$t_rpkerjasama_list->SearchColumnCount++;
@@ -220,7 +252,7 @@ loadjs.ready(["ft_rpkerjasamalistsrch"], function() {
 <input type="hidden" name="z_tahun_rencana" id="z_tahun_rencana" value="=">
 </span>
 		<span id="el_t_rpkerjasama_tahun_rencana" class="ew-search-field">
-<input type="text" data-table="t_rpkerjasama" data-field="x_tahun_rencana" name="x_tahun_rencana" id="x_tahun_rencana" size="5" maxlength="4" placeholder="<?php echo HtmlEncode($t_rpkerjasama_list->tahun_rencana->getPlaceHolder()) ?>" value="<?php echo $t_rpkerjasama_list->tahun_rencana->EditValue ?>"<?php echo $t_rpkerjasama_list->tahun_rencana->editAttributes() ?>>
+<input type="text" data-table="t_rpkerjasama" data-field="x_tahun_rencana" name="x_tahun_rencana" id="x_tahun_rencana" size="13" maxlength="4" placeholder="<?php echo HtmlEncode($t_rpkerjasama_list->tahun_rencana->getPlaceHolder()) ?>" value=""<?php echo $t_rpkerjasama_list->tahun_rencana->editAttributes() ?>>
 </span>
 	</div>
 	<?php if ($t_rpkerjasama_list->SearchColumnCount % $t_rpkerjasama_list->SearchFieldsPerRow == 0) { ?>
