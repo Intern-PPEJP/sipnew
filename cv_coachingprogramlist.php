@@ -34,6 +34,7 @@ $cv_coachingprogram_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$cv_coachingprogram_list->isExport()) { ?>
+
 <script>
 var fcv_coachingprogramlist, currentPageID;
 loadjs.ready("head", function() {
@@ -87,6 +88,7 @@ loadjs.ready("head", function() {
 	loadjs.done("fcv_coachingprogramlistsrch");
 });
 </script>
+
 <script>
 loadjs.ready("head", function() {
 
@@ -113,6 +115,7 @@ loadjs.ready("head", function() {
 <div class="clearfix"></div>
 </div>
 <?php } ?>
+
 <?php
 $cv_coachingprogram_list->renderOtherOptions();
 ?>
@@ -130,6 +133,33 @@ $cv_coachingprogram->RowType = ROWTYPE_SEARCH;
 $cv_coachingprogram->resetAttributes();
 $cv_coachingprogram_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 150px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
+
 <?php if ($cv_coachingprogram_list->kdjudul->Visible) { // kdjudul ?>
 	<?php
 		$cv_coachingprogram_list->SearchColumnCount++;
@@ -153,7 +183,7 @@ $onchange = ($onchange) ? ' onchange="' . JsEncode($onchange) . '"' : '';
 $cv_coachingprogram_list->kdjudul->EditAttrs["onchange"] = "";
 ?>
 <span id="as_x_kdjudul">
-	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($cv_coachingprogram_list->kdjudul->EditValue) ?>" size="100" placeholder="<?php echo HtmlEncode($cv_coachingprogram_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($cv_coachingprogram_list->kdjudul->getPlaceHolder()) ?>"<?php echo $cv_coachingprogram_list->kdjudul->editAttributes() ?>>
+	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($cv_coachingprogram_list->kdjudul->EditValue) ?>" size="50" placeholder="<?php echo HtmlEncode($cv_coachingprogram_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($cv_coachingprogram_list->kdjudul->getPlaceHolder()) ?>"<?php echo $cv_coachingprogram_list->kdjudul->editAttributes() ?>>
 </span>
 <input type="hidden" data-table="cv_coachingprogram" data-field="x_kdjudul" data-value-separator="<?php echo $cv_coachingprogram_list->kdjudul->displayValueSeparatorAttribute() ?>" name="x_kdjudul" id="x_kdjudul" value="<?php echo HtmlEncode($cv_coachingprogram_list->kdjudul->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
 <script>
@@ -168,6 +198,7 @@ loadjs.ready(["fcv_coachingprogramlistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
 <?php if ($cv_coachingprogram_list->kdprop->Visible) { // kdprop ?>
 	<?php
 		$cv_coachingprogram_list->SearchColumnCount++;
@@ -198,6 +229,7 @@ loadjs.ready(["fcv_coachingprogramlistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
 <?php if ($cv_coachingprogram_list->kdkota->Visible) { // kdkota ?>
 	<?php
 		$cv_coachingprogram_list->SearchColumnCount++;
