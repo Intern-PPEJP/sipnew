@@ -34,6 +34,7 @@ $t_biointruktur_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$t_biointruktur_list->isExport()) { ?>
+
 <script>
 var ft_biointrukturlist, currentPageID;
 loadjs.ready("head", function() {
@@ -86,9 +87,11 @@ loadjs.ready("head", function() {
 	loadjs.done("ft_biointrukturlistsrch");
 });
 </script>
+
 <script>
 ew.ready("head", "js/ewfixedheadertable.js", "fixedheadertable");
 </script>
+
 <script>
 loadjs.ready("head", function() {
 
@@ -97,6 +100,7 @@ loadjs.ready("head", function() {
 
 });
 </script>
+
 <?php } ?>
 <?php if (!$t_biointruktur_list->isExport()) { ?>
 <div class="btn-toolbar ew-toolbar">
@@ -115,6 +119,7 @@ loadjs.ready("head", function() {
 <div class="clearfix"></div>
 </div>
 <?php } ?>
+
 <?php
 $t_biointruktur_list->renderOtherOptions();
 ?>
@@ -132,6 +137,33 @@ $t_biointruktur->RowType = ROWTYPE_SEARCH;
 $t_biointruktur->resetAttributes();
 $t_biointruktur_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 150px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+	text-transform: uppercase;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
 <?php if ($t_biointruktur_list->nama->Visible) { // nama ?>
 	<?php
 		$t_biointruktur_list->SearchColumnCount++;
@@ -149,13 +181,14 @@ $t_biointruktur_list->renderRow();
 <input type="hidden" name="z_nama" id="z_nama" value="LIKE">
 </span>
 		<span id="el_t_biointruktur_nama" class="ew-search-field">
-<input type="text" data-table="t_biointruktur" data-field="x_nama" name="x_nama" id="x_nama" size="30" maxlength="200" placeholder="<?php echo HtmlEncode($t_biointruktur_list->nama->getPlaceHolder()) ?>" value="<?php echo $t_biointruktur_list->nama->EditValue ?>"<?php echo $t_biointruktur_list->nama->editAttributes() ?>>
+<input type="text" data-table="t_biointruktur" data-field="x_nama" name="x_nama" id="x_nama" size="50" maxlength="200" placeholder="<?php echo HtmlEncode($t_biointruktur_list->nama->getPlaceHolder()) ?>" value="<?php echo $t_biointruktur_list->nama->EditValue ?>"<?php echo $t_biointruktur_list->nama->editAttributes() ?>>
 </span>
 	</div>
 	<?php if ($t_biointruktur_list->SearchColumnCount % $t_biointruktur_list->SearchFieldsPerRow == 0) { ?>
 </div>
 	<?php } ?>
 <?php } ?>
+
 <?php if ($t_biointruktur_list->komp_materi->Visible) { // komp_materi ?>
 	<?php
 		$t_biointruktur_list->SearchColumnCount++;
@@ -182,11 +215,13 @@ $t_biointruktur_list->komp_materi->EditAttrs["onchange"] = "";
 	<input type="text" class="form-control" name="sv_x_komp_materi" id="sv_x_komp_materi" value="<?php echo RemoveHtml($t_biointruktur_list->komp_materi->EditValue) ?>" size="50" maxlength="50" placeholder="<?php echo HtmlEncode($t_biointruktur_list->komp_materi->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_biointruktur_list->komp_materi->getPlaceHolder()) ?>"<?php echo $t_biointruktur_list->komp_materi->editAttributes() ?>>
 </span>
 <input type="hidden" data-table="t_biointruktur" data-field="x_komp_materi" data-value-separator="<?php echo $t_biointruktur_list->komp_materi->displayValueSeparatorAttribute() ?>" name="x_komp_materi" id="x_komp_materi" value="<?php echo HtmlEncode($t_biointruktur_list->komp_materi->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
+
 <script>
 loadjs.ready(["ft_biointrukturlistsrch"], function() {
 	ft_biointrukturlistsrch.createAutoSuggest({"id":"x_komp_materi","forceSelect":true});
 });
 </script>
+
 <?php echo $t_biointruktur_list->komp_materi->Lookup->getParamTag($t_biointruktur_list, "p_x_komp_materi") ?>
 </span>
 	</div>
