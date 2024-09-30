@@ -34,6 +34,7 @@ $t_pelatihan_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$t_pelatihan_list->isExport()) { ?>
+
 <script>
 var ft_pelatihanlist, currentPageID;
 loadjs.ready("head", function() {
@@ -86,6 +87,7 @@ loadjs.ready("head", function() {
 	loadjs.done("ft_pelatihanlistsrch");
 });
 </script>
+
 <script>
 ew.ready("head", "js/ewfixedheadertable.js", "fixedheadertable");
 </script>
@@ -97,6 +99,7 @@ loadjs.ready("head", function() {
 });
 </script>
 <?php } ?>
+
 <?php if (!$t_pelatihan_list->isExport()) { ?>
 <div class="btn-toolbar ew-toolbar">
 <?php if ($t_pelatihan_list->TotalRecords > 0 && $t_pelatihan_list->ExportOptions->visible()) { ?>
@@ -137,6 +140,7 @@ if ($t_pelatihan_list->DbMasterFilter != "" && $t_pelatihan->getCurrentMasterTab
 }
 ?>
 <?php } ?>
+
 <?php
 $t_pelatihan_list->renderOtherOptions();
 ?>
@@ -154,6 +158,34 @@ $t_pelatihan->RowType = ROWTYPE_SEARCH;
 $t_pelatihan->resetAttributes();
 $t_pelatihan_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 150px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+	text-transform: uppercase;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
+
 <?php if ($t_pelatihan_list->kdjudul->Visible) { // kdjudul ?>
 	<?php
 		$t_pelatihan_list->SearchColumnCount++;
@@ -177,7 +209,7 @@ $onchange = ($onchange) ? ' onchange="' . JsEncode($onchange) . '"' : '';
 $t_pelatihan_list->kdjudul->EditAttrs["onchange"] = "";
 ?>
 <span id="as_x_kdjudul">
-	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($t_pelatihan_list->kdjudul->EditValue) ?>" size="100" placeholder="<?php echo HtmlEncode($t_pelatihan_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_pelatihan_list->kdjudul->getPlaceHolder()) ?>"<?php echo $t_pelatihan_list->kdjudul->editAttributes() ?>>
+	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($t_pelatihan_list->kdjudul->EditValue) ?>" size="50" placeholder="<?php echo HtmlEncode($t_pelatihan_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_pelatihan_list->kdjudul->getPlaceHolder()) ?>"<?php echo $t_pelatihan_list->kdjudul->editAttributes() ?>>
 </span>
 <input type="hidden" data-table="t_pelatihan" data-field="x_kdjudul" data-value-separator="<?php echo $t_pelatihan_list->kdjudul->displayValueSeparatorAttribute() ?>" name="x_kdjudul" id="x_kdjudul" value="<?php echo HtmlEncode($t_pelatihan_list->kdjudul->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
 <script>
