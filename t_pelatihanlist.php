@@ -167,7 +167,7 @@ $t_pelatihan_list->renderRow();
 }
 
 .ew-search-caption {
-    width: 150px; /* Atur lebar label agar seragam */
+    width: 60px; /* Atur lebar label agar seragam */
     text-align: left !important;
     padding-right: 10px;
 	justify-content: left !important;
@@ -241,7 +241,7 @@ loadjs.ready(["ft_pelatihanlistsrch"], function() {
 <input type="hidden" name="z_Tahun" id="z_Tahun" value="=">
 </span>
 		<span id="el_t_pelatihan_Tahun" class="ew-search-field">
-<input type="text" data-table="t_pelatihan" data-field="x_Tahun" name="x_Tahun" id="x_Tahun" size="4" maxlength="4" placeholder="<?php echo HtmlEncode($t_pelatihan_list->Tahun->getPlaceHolder()) ?>" value="<?php echo $t_pelatihan_list->Tahun->EditValue ?>"<?php echo $t_pelatihan_list->Tahun->editAttributes() ?>>
+<input type="text" data-table="t_pelatihan" data-field="x_Tahun" name="x_Tahun" id="x_Tahun" size="4" maxlength="4" placeholder="<?php echo HtmlEncode($t_pelatihan_list->Tahun->getPlaceHolder()) ?>" value=""<?php echo $t_pelatihan_list->Tahun->editAttributes() ?>>
 </span>
 	</div>
 	<?php if ($t_pelatihan_list->SearchColumnCount % $t_pelatihan_list->SearchFieldsPerRow == 0) { ?>
