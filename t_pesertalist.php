@@ -183,7 +183,7 @@ $t_peserta_list->renderRow();
 }
 
 .ew-search-caption {
-    width: 150px; /* Atur lebar label agar seragam */
+    width: 60px; /* Atur lebar label agar seragam */
     text-align: left !important;
     padding-right: 10px;
 	justify-content: left !important;
