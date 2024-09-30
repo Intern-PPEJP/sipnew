@@ -34,6 +34,7 @@ $webinar_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$webinar_list->isExport()) { ?>
+
 <script>
 var fwebinarlist, currentPageID;
 loadjs.ready("head", function() {
@@ -82,6 +83,7 @@ loadjs.ready("head", function() {
 	loadjs.done("fwebinarlistsrch");
 });
 </script>
+
 <script>
 loadjs.ready("head", function() {
 
@@ -108,9 +110,11 @@ loadjs.ready("head", function() {
 <div class="clearfix"></div>
 </div>
 <?php } ?>
+
 <?php
 $webinar_list->renderOtherOptions();
 ?>
+
 <?php if ($Security->CanSearch()) { ?>
 <?php if (!$webinar_list->isExport() && !$webinar->CurrentAction) { ?>
 <form name="fwebinarlistsrch" id="fwebinarlistsrch" class="form-inline ew-form ew-ext-search-form" action="<?php echo CurrentPageName() ?>">
@@ -125,6 +129,34 @@ $webinar->RowType = ROWTYPE_SEARCH;
 $webinar->resetAttributes();
 $webinar_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 60px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+	text-transform: uppercase;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 150px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
+
 <?php if ($webinar_list->tahun->Visible) { // tahun ?>
 	<?php
 		$webinar_list->SearchColumnCount++;
