@@ -250,7 +250,7 @@ loadjs.ready(["ft_rpdiklatlistsrch"], function() {
 <input type="hidden" name="z_tahun_rencana" id="z_tahun_rencana" value="=">
 </span>
 		<span id="el_t_rpdiklat_tahun_rencana" class="ew-search-field">
-<input type="text" data-table="t_rpdiklat" data-field="x_tahun_rencana" name="x_tahun_rencana" id="x_tahun_rencana" size="13" maxlength="4" placeholder="<?php echo HtmlEncode($t_rpdiklat_list->tahun_rencana->getPlaceHolder()) ?>" value="<?php echo $t_rpdiklat_list->tahun_rencana->EditValue ?>"<?php echo $t_rpdiklat_list->tahun_rencana->editAttributes() ?>>
+<input type="text" data-table="t_rpdiklat" data-field="x_tahun_rencana" name="x_tahun_rencana" id="x_tahun_rencana" size="13" maxlength="4" placeholder="<?php echo HtmlEncode($t_rpdiklat_list->tahun_rencana->getPlaceHolder()) ?>" value=""<?php echo $t_rpdiklat_list->tahun_rencana->editAttributes() ?>>
 </span>
 	</div>
 	<?php if ($t_rpdiklat_list->SearchColumnCount % $t_rpdiklat_list->SearchFieldsPerRow == 0) { ?>
