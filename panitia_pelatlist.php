@@ -145,7 +145,7 @@ $panitia_pelat_list->renderRow();
 }
 
 .ew-search-caption {
-    width: 150px; /* Atur lebar label agar seragam */
+    width: 60px; /* Atur lebar label agar seragam */
     text-align: left !important;
     padding-right: 10px;
 	justify-content: left !important;
@@ -158,7 +158,7 @@ $panitia_pelat_list->renderRow();
 }
 
 .input-group .custom-select {
-    width: 300px; /* Atur lebar select di dalam input-group */
+    width: 130px; /* Atur lebar select di dalam input-group */
 }
 
 </style>
