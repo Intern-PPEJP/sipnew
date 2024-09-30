@@ -34,6 +34,7 @@ $t_judul_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$t_judul_list->isExport()) { ?>
+
 <script>
 var ft_judullist, currentPageID;
 loadjs.ready("head", function() {
@@ -85,6 +86,7 @@ loadjs.ready("head", function() {
 	loadjs.done("ft_judullistsrch");
 });
 </script>
+
 <script>
 loadjs.ready("head", function() {
 
@@ -112,6 +114,7 @@ loadjs.ready("head", function() {
 <div class="clearfix"></div>
 </div>
 <?php } ?>
+
 <?php
 $t_judul_list->renderOtherOptions();
 ?>
@@ -129,6 +132,33 @@ $t_judul->RowType = ROWTYPE_SEARCH;
 $t_judul->resetAttributes();
 $t_judul_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 110px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
+
 <?php if ($t_judul_list->kdbidang->Visible) { // kdbidang ?>
 	<?php
 		$t_judul_list->SearchColumnCount++;
