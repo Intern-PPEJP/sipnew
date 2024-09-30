@@ -34,6 +34,7 @@ $t_jdiklat_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$t_jdiklat_list->isExport()) { ?>
+
 <script>
 var ft_jdiklatlist, currentPageID;
 loadjs.ready("head", function() {
@@ -83,6 +84,7 @@ loadjs.ready("head", function() {
 	loadjs.done("ft_jdiklatlistsrch");
 });
 </script>
+
 <script>
 loadjs.ready("head", function() {
 
@@ -91,6 +93,7 @@ loadjs.ready("head", function() {
 
 });
 </script>
+
 <?php } ?>
 <?php if (!$t_jdiklat_list->isExport()) { ?>
 <div class="btn-toolbar ew-toolbar">
@@ -126,6 +129,33 @@ $t_jdiklat->RowType = ROWTYPE_SEARCH;
 $t_jdiklat->resetAttributes();
 $t_jdiklat_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 150px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+	text-transform: uppercase;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
 <?php if ($t_jdiklat_list->tahun->Visible) { // tahun ?>
 	<?php
 		$t_jdiklat_list->SearchColumnCount++;
