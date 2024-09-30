@@ -34,6 +34,7 @@ $panitia_pelat_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$panitia_pelat_list->isExport()) { ?>
+
 <script>
 var fpanitia_pelatlist, currentPageID;
 loadjs.ready("head", function() {
@@ -88,6 +89,7 @@ loadjs.ready("head", function() {
 	loadjs.done("fpanitia_pelatlistsrch");
 });
 </script>
+
 <script>
 loadjs.ready("head", function() {
 
@@ -97,6 +99,7 @@ loadjs.ready("head", function() {
 });
 </script>
 <?php } ?>
+
 <?php if (!$panitia_pelat_list->isExport()) { ?>
 <div class="btn-toolbar ew-toolbar">
 <?php if ($panitia_pelat_list->TotalRecords > 0 && $panitia_pelat_list->ExportOptions->visible()) { ?>
@@ -114,9 +117,11 @@ loadjs.ready("head", function() {
 <div class="clearfix"></div>
 </div>
 <?php } ?>
+
 <?php
 $panitia_pelat_list->renderOtherOptions();
 ?>
+
 <?php if ($Security->CanSearch()) { ?>
 <?php if (!$panitia_pelat_list->isExport() && !$panitia_pelat->CurrentAction) { ?>
 <form name="fpanitia_pelatlistsrch" id="fpanitia_pelatlistsrch" class="form-inline ew-form ew-ext-search-form" action="<?php echo CurrentPageName() ?>">
@@ -131,35 +136,34 @@ $panitia_pelat->RowType = ROWTYPE_SEARCH;
 $panitia_pelat->resetAttributes();
 $panitia_pelat_list->renderRow();
 ?>
-<?php if ($panitia_pelat_list->tahun->Visible) { // tahun ?>
-	<?php
-		$panitia_pelat_list->SearchColumnCount++;
-		if (($panitia_pelat_list->SearchColumnCount - 1) % $panitia_pelat_list->SearchFieldsPerRow == 0) {
-			$panitia_pelat_list->SearchRowCount++;
-	?>
-<div id="xsr_<?php echo $panitia_pelat_list->SearchRowCount ?>" class="ew-row d-sm-flex">
-	<?php
-		}
-	 ?>
-	<div id="xsc_tahun" class="ew-cell form-group">
-		<label for="x_tahun" class="ew-search-caption ew-label"><?php echo $panitia_pelat_list->tahun->caption() ?></label>
-		<span class="ew-search-operator">
-<?php echo $Language->phrase("=") ?>
-<input type="hidden" name="z_tahun" id="z_tahun" value="=">
-</span>
-		<span id="el_panitia_pelat_tahun" class="ew-search-field">
-<div class="input-group">
-	<select class="custom-select ew-custom-select" data-table="panitia_pelat" data-field="x_tahun" data-value-separator="<?php echo $panitia_pelat_list->tahun->displayValueSeparatorAttribute() ?>" id="x_tahun" name="x_tahun"<?php echo $panitia_pelat_list->tahun->editAttributes() ?>>
-			<?php echo $panitia_pelat_list->tahun->selectOptionListHtml("x_tahun") ?>
-		</select>
-</div>
-<?php echo $panitia_pelat_list->tahun->Lookup->getParamTag($panitia_pelat_list, "p_x_tahun") ?>
-</span>
-	</div>
-	<?php if ($panitia_pelat_list->SearchColumnCount % $panitia_pelat_list->SearchFieldsPerRow == 0) { ?>
-</div>
-	<?php } ?>
-<?php } ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 150px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+	text-transform: uppercase;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
+
 <?php if ($panitia_pelat_list->id_peg->Visible) { // id_peg ?>
 	<?php
 		$panitia_pelat_list->SearchColumnCount++;
@@ -198,6 +202,37 @@ loadjs.ready(["fpanitia_pelatlistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
+<?php if ($panitia_pelat_list->tahun->Visible) { // tahun ?>
+	<?php
+		$panitia_pelat_list->SearchColumnCount++;
+		if (($panitia_pelat_list->SearchColumnCount - 1) % $panitia_pelat_list->SearchFieldsPerRow == 0) {
+			$panitia_pelat_list->SearchRowCount++;
+	?>
+<div id="xsr_<?php echo $panitia_pelat_list->SearchRowCount ?>" class="ew-row d-sm-flex">
+	<?php
+		}
+	 ?>
+	<div id="xsc_tahun" class="ew-cell form-group">
+		<label for="x_tahun" class="ew-search-caption ew-label"><?php echo $panitia_pelat_list->tahun->caption() ?></label>
+		<span class="ew-search-operator">
+<?php echo $Language->phrase("=") ?>
+<input type="hidden" name="z_tahun" id="z_tahun" value="=">
+</span>
+		<span id="el_panitia_pelat_tahun" class="ew-search-field">
+<div class="input-group">
+	<select class="custom-select ew-custom-select" data-table="panitia_pelat" data-field="x_tahun" data-value-separator="<?php echo $panitia_pelat_list->tahun->displayValueSeparatorAttribute() ?>" id="x_tahun" name="x_tahun"<?php echo $panitia_pelat_list->tahun->editAttributes() ?>>
+			<?php echo $panitia_pelat_list->tahun->selectOptionListHtml("x_tahun") ?>
+		</select>
+</div>
+<?php echo $panitia_pelat_list->tahun->Lookup->getParamTag($panitia_pelat_list, "p_x_tahun") ?>
+</span>
+	</div>
+	<?php if ($panitia_pelat_list->SearchColumnCount % $panitia_pelat_list->SearchFieldsPerRow == 0) { ?>
+</div>
+	<?php } ?>
+<?php } ?>
+
 	<?php if ($panitia_pelat_list->SearchColumnCount % $panitia_pelat_list->SearchFieldsPerRow > 0) { ?>
 </div>
 	<?php } ?>
