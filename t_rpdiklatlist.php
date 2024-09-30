@@ -34,6 +34,7 @@ $t_rpdiklat_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$t_rpdiklat_list->isExport()) { ?>
+
 <script>
 var ft_rpdiklatlist, currentPageID;
 loadjs.ready("head", function() {
@@ -88,6 +89,7 @@ loadjs.ready("head", function() {
 	loadjs.done("ft_rpdiklatlistsrch");
 });
 </script>
+
 <script>
 ew.ready("head", "js/ewfixedheadertable.js", "fixedheadertable");
 </script>
@@ -100,6 +102,7 @@ loadjs.ready("head", function() {
 });
 </script>
 <?php } ?>
+
 <?php if (!$t_rpdiklat_list->isExport()) { ?>
 <div class="btn-toolbar ew-toolbar">
 <?php if ($t_rpdiklat_list->TotalRecords > 0 && $t_rpdiklat_list->ExportOptions->visible()) { ?>
@@ -117,6 +120,7 @@ loadjs.ready("head", function() {
 <div class="clearfix"></div>
 </div>
 <?php } ?>
+
 <?php
 $t_rpdiklat_list->renderOtherOptions();
 ?>
@@ -134,6 +138,32 @@ $t_rpdiklat->RowType = ROWTYPE_SEARCH;
 $t_rpdiklat->resetAttributes();
 $t_rpdiklat_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 150px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
 <?php if ($t_rpdiklat_list->kdjudul->Visible) { // kdjudul ?>
 	<?php
 		$t_rpdiklat_list->SearchColumnCount++;
@@ -157,7 +187,7 @@ $onchange = ($onchange) ? ' onchange="' . JsEncode($onchange) . '"' : '';
 $t_rpdiklat_list->kdjudul->EditAttrs["onchange"] = "";
 ?>
 <span id="as_x_kdjudul">
-	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($t_rpdiklat_list->kdjudul->EditValue) ?>" size="100" placeholder="<?php echo HtmlEncode($t_rpdiklat_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_rpdiklat_list->kdjudul->getPlaceHolder()) ?>"<?php echo $t_rpdiklat_list->kdjudul->editAttributes() ?>>
+	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($t_rpdiklat_list->kdjudul->EditValue) ?>" size="50" placeholder="<?php echo HtmlEncode($t_rpdiklat_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_rpdiklat_list->kdjudul->getPlaceHolder()) ?>"<?php echo $t_rpdiklat_list->kdjudul->editAttributes() ?>>
 </span>
 <input type="hidden" data-table="t_rpdiklat" data-field="x_kdjudul" data-value-separator="<?php echo $t_rpdiklat_list->kdjudul->displayValueSeparatorAttribute() ?>" name="x_kdjudul" id="x_kdjudul" value="<?php echo HtmlEncode($t_rpdiklat_list->kdjudul->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
 <script>
@@ -172,6 +202,7 @@ loadjs.ready(["ft_rpdiklatlistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
 <?php if ($t_rpdiklat_list->kdbidang->Visible) { // kdbidang ?>
 	<?php
 		$t_rpdiklat_list->SearchColumnCount++;
@@ -201,6 +232,7 @@ loadjs.ready(["ft_rpdiklatlistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
 <?php if ($t_rpdiklat_list->tahun_rencana->Visible) { // tahun_rencana ?>
 	<?php
 		$t_rpdiklat_list->SearchColumnCount++;
@@ -218,7 +250,7 @@ loadjs.ready(["ft_rpdiklatlistsrch"], function() {
 <input type="hidden" name="z_tahun_rencana" id="z_tahun_rencana" value="=">
 </span>
 		<span id="el_t_rpdiklat_tahun_rencana" class="ew-search-field">
-<input type="text" data-table="t_rpdiklat" data-field="x_tahun_rencana" name="x_tahun_rencana" id="x_tahun_rencana" size="5" maxlength="4" placeholder="<?php echo HtmlEncode($t_rpdiklat_list->tahun_rencana->getPlaceHolder()) ?>" value="<?php echo $t_rpdiklat_list->tahun_rencana->EditValue ?>"<?php echo $t_rpdiklat_list->tahun_rencana->editAttributes() ?>>
+<input type="text" data-table="t_rpdiklat" data-field="x_tahun_rencana" name="x_tahun_rencana" id="x_tahun_rencana" size="13" maxlength="4" placeholder="<?php echo HtmlEncode($t_rpdiklat_list->tahun_rencana->getPlaceHolder()) ?>" value=""<?php echo $t_rpdiklat_list->tahun_rencana->editAttributes() ?>>
 </span>
 	</div>
 	<?php if ($t_rpdiklat_list->SearchColumnCount % $t_rpdiklat_list->SearchFieldsPerRow == 0) { ?>
