@@ -43,6 +43,12 @@ Page_Rendering();
 	$yerfiv = "(" . $oldy . " - " . $thn . ")";
 ?>
 
+<style>
+	select.form-control{
+		margin-left: 30px;
+	}
+</style>
+
 <div class="row">
 <div class="col-md-12">
 <div class="card card-default">
@@ -54,7 +60,7 @@ Page_Rendering();
   <form role="form">
 	<div class="card-body">
 	  <div class="form-group">
-		<label for="tahun">Tahun</label>
+		<label for="tahun">TAHUN</label>
 		<select id="tahun" name="tahun" class="form-control">
 			<option value="" disabled="">
 				Pilih tahun</option>
