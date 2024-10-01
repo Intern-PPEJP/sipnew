@@ -46,77 +46,87 @@ Page_Rendering();
 	$linktime = "&bulan=".$bln."&bulan2=".$blnakhir."&tahun=".$thn;
 ?>
 
+<style>
+	.form-group {
+	margin-bottom: 5px;
+	}
+
+	select.form-control {
+	width: 100%; /* Pastikan elemen select memiliki lebar penuh */
+	}
+
+	.card-footer {
+	margin-top: 20px;
+	}
+
+</style>
 
 <div class="card card-default">
   <div class="card-header">
-	<h3 class="card-title">Pencarian</h3>
+    <h3 class="card-title">Pencarian</h3>
   </div>
-  <!-- /.card-header -->
-  <!-- form start -->
   <form role="form">
-	<div class="card-body">
-	  <div class="form-group">
-		<label for="tahun">Tahun</label>
-		<select id="tahun" name="tahun" class="form-control">
-			<option value="" disabled="">
-				Pilih tahun</option>
-				<?php 
-				$jmin = 2010; // tahun terlama
-				$jmax = date("Y") + 1; // 1 tahun kedepan
-				$selc = "";
-				for ($x = $jmin; $x<= $jmax; $x++) {
-					if($x == $thn){
-						$selc = " selected=\"\"";
-					} else {
-						$selc = "";
-					}
-					echo "<option value=\"".$x."\"".$selc.">".$x."</option>";
-				}
-				?>
-		</select>
-	  </div>
-	  <div class="form-group">
-		<label for="bulan">Bulan</label>
-		<select id="bulan" name="bulan" class="form-control">
-			<option value="" disabled="">Pilih bulan</option>
-			<?php
-			$bmin = 1;
-			$bmax = 12;
-			
-			for ($b = $bmin; $b<= $bmax; $b++) {
-					if($b == $bln){
-						$selc = " selected=\"\"";
-					} else {
-						$selc = "";
-					}
-					echo "<option value=\"".$b."\"".$selc.">".$bln_indo[$b]."</option>";
-				}
-			?>
-		</select>
-		Sampai Dengan
-		<select id="bulan2" name="bulan2" class="form-control">
-			<option value="" disabled="">Pilih bulan</option>
-			<?php
-			$sbmin = 1;
-			$sbmax = 12;
-			for ($sb = $sbmin; $sb<= $sbmax; $sb++) {
-					if($sb == $blnakhir){
-						$selc2 = " selected=\"\"";
-					} else {
-						$selc2 = "";
-					}
-					echo "<option value=\"".$sb."\"".$selc2.">".$bln_indo[$sb]."</option>";
-				}
-			?>
-		</select>
-	  </div>
-	 
-	</div>
-	<!-- /.card-body -->
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="tahun">TAHUN</label>
+          <select id="tahun" name="tahun" class="form-control">
+            <option value="" disabled>Pilih tahun</option>
+            <?php 
+            $jmin = 2010; // tahun terlama
+            $jmax = date("Y") + 1; // 1 tahun kedepan
+            $selc = "";
+            for ($x = $jmin; $x <= $jmax; $x++) {
+              if($x == $thn){
+                $selc = " selected";
+              } else {
+                $selc = "";
+              }
+              echo "<option value=\"".$x."\"".$selc.">".$x."</option>";
+            }
+            ?>
+          </select>
+        </div>
+        
+        <div class="form-group col-md-4">
+          <label for="bulan">BULAN</label>
+          <select id="bulan" name="bulan" class="form-control">
+            <option value="" disabled>Pilih bulan</option>
+            <?php
+            for ($b = 1; $b <= 12; $b++) {
+              if($b == $bln){
+                $selc = " selected";
+              } else {
+                $selc = "";
+              }
+              echo "<option value=\"".$b."\"".$selc.">".$bln_indo[$b]."</option>";
+            }
+            ?>
+          </select>
+        </div>
 
-	<div class="card-footer">
-	  <button type="cari" class="btn btn-primary">Cari</button>
-	</div>
+        <div class="form-group col-md-4">
+          <label for="bulan2">SAMPAI DENGAN</label>
+          <select id="bulan2" name="bulan2" class="form-control">
+            <option value="" disabled>Pilih bulan</option>
+            <?php
+            for ($sb = 1; $sb <= 12; $sb++) {
+              if($sb == $blnakhir){
+                $selc2 = " selected";
+              } else {
+                $selc2 = "";
+              }
+              echo "<option value=\"".$sb."\"".$selc2.">".$bln_indo[$sb]."</option>";
+            }
+            ?>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <button type="submit" class="btn btn-primary">Cari</button>
+    </div>
   </form>
 </div>
 
