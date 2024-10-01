@@ -252,7 +252,7 @@ $onchange = ($onchange) ? ' onchange="' . JsEncode($onchange) . '"' : '';
 $t_juduldetail_list->kdjudul->EditAttrs["onchange"] = "";
 ?>
 <span id="as_x_kdjudul">
-	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($t_juduldetail_list->kdjudul->EditValue) ?>" size="30" placeholder="<?php echo HtmlEncode($t_juduldetail_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_juduldetail_list->kdjudul->getPlaceHolder()) ?>"<?php echo $t_juduldetail_list->kdjudul->editAttributes() ?>>
+	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($t_juduldetail_list->kdjudul->EditValue) ?>" size="50" placeholder="<?php echo HtmlEncode($t_juduldetail_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($t_juduldetail_list->kdjudul->getPlaceHolder()) ?>"<?php echo $t_juduldetail_list->kdjudul->editAttributes() ?>>
 </span>
 <input type="hidden" data-table="t_juduldetail" data-field="x_kdjudul" data-value-separator="<?php echo $t_juduldetail_list->kdjudul->displayValueSeparatorAttribute() ?>" name="x_kdjudul" id="x_kdjudul" value="<?php echo HtmlEncode($t_juduldetail_list->kdjudul->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
 <script>
