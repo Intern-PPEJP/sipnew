@@ -34,6 +34,7 @@ $t_juduldetail_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$t_juduldetail_list->isExport()) { ?>
+
 <script>
 var ft_juduldetaillist, currentPageID;
 loadjs.ready("head", function() {
@@ -87,6 +88,7 @@ loadjs.ready("head", function() {
 	loadjs.done("ft_juduldetaillistsrch");
 });
 </script>
+
 <script>
 loadjs.ready("head", function() {
 
@@ -113,6 +115,7 @@ loadjs.ready("head", function() {
 <div class="clearfix"></div>
 </div>
 <?php } ?>
+
 <?php if (!$t_juduldetail_list->isExport() || Config("EXPORT_MASTER_RECORD") && $t_juduldetail_list->isExport("print")) { ?>
 <?php
 if ($t_juduldetail_list->DbMasterFilter != "" && $t_juduldetail->getCurrentMasterTable() == "t_judul") {
@@ -139,6 +142,34 @@ $t_juduldetail->RowType = ROWTYPE_SEARCH;
 $t_juduldetail->resetAttributes();
 $t_juduldetail_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 120px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+	text-transform: uppercase;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
+
 <?php if ($t_juduldetail_list->singbagian->Visible) { // singbagian ?>
 	<?php
 		$t_juduldetail_list->SearchColumnCount++;
@@ -168,6 +199,7 @@ $t_juduldetail_list->renderRow();
 </div>
 	<?php } ?>
 <?php } ?>
+
 <?php if ($t_juduldetail_list->jpel->Visible) { // jpel ?>
 	<?php
 		$t_juduldetail_list->SearchColumnCount++;
@@ -196,6 +228,7 @@ $t_juduldetail_list->renderRow();
 </div>
 	<?php } ?>
 <?php } ?>
+
 <?php if ($t_juduldetail_list->kdjudul->Visible) { // kdjudul ?>
 	<?php
 		$t_juduldetail_list->SearchColumnCount++;
