@@ -34,6 +34,7 @@ $petri_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$petri_list->isExport()) { ?>
+
 <script>
 var fpetrilist, currentPageID;
 loadjs.ready("head", function() {
@@ -87,6 +88,7 @@ loadjs.ready("head", function() {
 	loadjs.done("fpetrilistsrch");
 });
 </script>
+
 <script>
 loadjs.ready("head", function() {
 
@@ -96,6 +98,7 @@ loadjs.ready("head", function() {
 });
 </script>
 <?php } ?>
+
 <?php if (!$petri_list->isExport()) { ?>
 <div class="btn-toolbar ew-toolbar">
 <?php if ($petri_list->TotalRecords > 0 && $petri_list->ExportOptions->visible()) { ?>
@@ -113,6 +116,7 @@ loadjs.ready("head", function() {
 <div class="clearfix"></div>
 </div>
 <?php } ?>
+
 <?php
 $petri_list->renderOtherOptions();
 ?>
@@ -130,6 +134,33 @@ $petri->RowType = ROWTYPE_SEARCH;
 $petri->resetAttributes();
 $petri_list->renderRow();
 ?>
+
+<style>
+	.ew-cell {
+    display: flex;
+    align-items: left; /* Untuk menyejajarkan label dan input secara vertikal */
+    margin-bottom: 10px; /* Tambahkan margin antar elemen */
+}
+
+.ew-search-caption {
+    width: 230px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+}
+
+.ew-search-field input,
+.ew-search-field select {
+    width: 300px; /* Atur lebar input dan select agar seragam */
+}
+
+.input-group .custom-select {
+    width: 300px; /* Atur lebar select di dalam input-group */
+}
+
+</style>
+
+
 <?php if ($petri_list->kdjudul->Visible) { // kdjudul ?>
 	<?php
 		$petri_list->SearchColumnCount++;
@@ -153,7 +184,7 @@ $onchange = ($onchange) ? ' onchange="' . JsEncode($onchange) . '"' : '';
 $petri_list->kdjudul->EditAttrs["onchange"] = "";
 ?>
 <span id="as_x_kdjudul">
-	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($petri_list->kdjudul->EditValue) ?>" size="100" placeholder="<?php echo HtmlEncode($petri_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($petri_list->kdjudul->getPlaceHolder()) ?>"<?php echo $petri_list->kdjudul->editAttributes() ?>>
+	<input type="text" class="form-control" name="sv_x_kdjudul" id="sv_x_kdjudul" value="<?php echo RemoveHtml($petri_list->kdjudul->EditValue) ?>" size="50" placeholder="<?php echo HtmlEncode($petri_list->kdjudul->getPlaceHolder()) ?>" data-placeholder="<?php echo HtmlEncode($petri_list->kdjudul->getPlaceHolder()) ?>"<?php echo $petri_list->kdjudul->editAttributes() ?>>
 </span>
 <input type="hidden" data-table="petri" data-field="x_kdjudul" data-value-separator="<?php echo $petri_list->kdjudul->displayValueSeparatorAttribute() ?>" name="x_kdjudul" id="x_kdjudul" value="<?php echo HtmlEncode($petri_list->kdjudul->AdvancedSearch->SearchValue) ?>"<?php echo $onchange ?>>
 <script>
@@ -168,6 +199,8 @@ loadjs.ready(["fpetrilistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
+
 <?php if ($petri_list->kdprop->Visible) { // kdprop ?>
 	<?php
 		$petri_list->SearchColumnCount++;
@@ -198,6 +231,8 @@ loadjs.ready(["fpetrilistsrch"], function() {
 </div>
 	<?php } ?>
 <?php } ?>
+
+
 <?php if ($petri_list->kdkota->Visible) { // kdkota ?>
 	<?php
 		$petri_list->SearchColumnCount++;
