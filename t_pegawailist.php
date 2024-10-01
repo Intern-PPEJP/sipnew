@@ -34,6 +34,7 @@ $t_pegawai_list->Page_Render();
 ?>
 <?php include_once "header.php"; ?>
 <?php if (!$t_pegawai_list->isExport()) { ?>
+
 <script>
 var ft_pegawailist, currentPageID;
 loadjs.ready("head", function() {
@@ -82,6 +83,7 @@ loadjs.ready("head", function() {
 	loadjs.done("ft_pegawailistsrch");
 });
 </script>
+
 <script>
 loadjs.ready("head", function() {
 
@@ -91,6 +93,7 @@ loadjs.ready("head", function() {
 });
 </script>
 <?php } ?>
+
 <?php if (!$t_pegawai_list->isExport()) { ?>
 <div class="btn-toolbar ew-toolbar">
 <?php if ($t_pegawai_list->TotalRecords > 0 && $t_pegawai_list->ExportOptions->visible()) { ?>
@@ -125,6 +128,18 @@ $t_pegawai->RowType = ROWTYPE_SEARCH;
 $t_pegawai->resetAttributes();
 $t_pegawai_list->renderRow();
 ?>
+
+<style>
+	.ew-search-caption {
+    width: 60px; /* Atur lebar label agar seragam */
+    text-align: left !important;
+    padding-right: 10px;
+	justify-content: left !important;
+	text-transform: uppercase;
+}
+
+</style>
+
 <?php if ($t_pegawai_list->bagian->Visible) { // bagian ?>
 	<?php
 		$t_pegawai_list->SearchColumnCount++;
