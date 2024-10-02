@@ -261,6 +261,13 @@ $t_cp_list->renderListOptions();
 // Render list options (header, left)
 $t_cp_list->ListOptions->render("header", "left");
 ?>
+
+<style>
+	.ew-table-header-caption {
+    text-transform: uppercase;
+}
+</style>
+
 <?php if ($t_cp_list->namap->Visible) { // namap ?>
 	<?php if ($t_cp_list->SortUrl($t_cp_list->namap) == "") { ?>
 		<th data-name="namap" class="<?php echo $t_cp_list->namap->headerCellClass() ?>"><div id="elh_t_cp_namap" class="t_cp_namap"><div class="ew-table-header-caption"><?php echo $t_cp_list->namap->caption() ?></div></div></th>
