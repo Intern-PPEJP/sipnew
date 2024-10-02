@@ -233,6 +233,13 @@ $t_pegawai_list->renderListOptions();
 // Render list options (header, left)
 $t_pegawai_list->ListOptions->render("header", "left");
 ?>
+
+<style>
+	.ew-table-header-caption {
+    text-transform: uppercase;
+}
+</style>
+
 <?php if ($t_pegawai_list->nip->Visible) { // nip ?>
 	<?php if ($t_pegawai_list->SortUrl($t_pegawai_list->nip) == "") { ?>
 		<th data-name="nip" class="<?php echo $t_pegawai_list->nip->headerCellClass() ?>"><div id="elh_t_pegawai_nip" class="t_pegawai_nip"><div class="ew-table-header-caption"><?php echo $t_pegawai_list->nip->caption() ?></div></div></th>
