@@ -57,7 +57,6 @@ Page_Rendering();
 
 .sidebar-collapse .content-header .text-dark{display:none;}
 
-
 .nav-tabs {
 	font-size: 15px;
 	margin-bottom: 0;
@@ -69,8 +68,6 @@ Page_Rendering();
 	
 	border-color: #dee2e6 #dee2e6 #fff;
 }
-
-
 
 .modal {
   padding: 0 !important; // override inline padding-right added from js
@@ -90,9 +87,6 @@ Page_Rendering();
   overflow-y: auto;
 }
 </style>
-
-
-
 
 <ul class="nav nav-tabs" id="beranda-tab" role="tablist">
 <li class="nav-item">
@@ -135,7 +129,6 @@ Page_Rendering();
 	</select>
 </li>
 <!-- END DROPDOWN TAHUN -->
-
 </ul>
 
 
@@ -416,7 +409,6 @@ Page_Rendering();
 <!-- END TOP FIVE -->
 
 
-
 </div> 
 <!-- END HALAMAN ECP -->
 
@@ -525,6 +517,7 @@ Page_Rendering();
   padding: 10px;
 }
 </style>
+
 <script>
 function square_data(chart){
     var c = document.createElement("canvas");
@@ -609,8 +602,6 @@ document.getElementById("download").addEventListener('click', function(){
   /*insert chart image url to download button (tag: <a></a>) */
   a.href = url_base64jp;
 });
-
-
 </script>
 
 
@@ -826,6 +817,7 @@ canvasP.onclick = function(e) {
 }
 
 */
+
 </script>
 
 <script>
@@ -837,9 +829,6 @@ var bgColor = ["#878BB6", "#FFEA88", "#FF8153", "#4ACAB4", "#c0504d", "#8064a2",
 var canvas2 = document.getElementById("piechart_2");
 var ctx2 = canvas2.getContext('2d');
 var myPieChart2 = new Chart(ctx2, {"type":"doughnut",options: { title: { display: false, text: ' NILAI EKSPOR (USD) PER WILAYAH' }, legend: { display: true, position: "right", labels: { usePointStyle: true } }, elements:{ "point":{"pointStyle":square_data_pie}, }, responsive: true, maintainAspectRatio: true, plugins: { labels: [{ render: 'percentage', fontColor: bgColor, precision: 2, fontSize: 14,fontStyle: "normal", fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif", shadowBlur: 10, shadowOffsetX: -5, shadowOffsetY: 5, arc: false, position: "outside", overlap: true, showActualPercentages: true, outsidePadding: 10, textMargin: 4 },{ render: 'label', position: 'default', arc: false, fontSize: 10, fontColor: '#fff', } ] },},"data":{"labels":myData_a,"datasets":[{"label":"Total Nilai Ekspor","data":myLabels_a,"backgroundColor":bgColor}]}});
-
-
-
 
 
 canvas2.onclick = function(e) {
@@ -916,7 +905,6 @@ new Chart(document.getElementById("piechart_4"),{"type":"doughnut",options: { ti
 	}
 ?>
 
-
 <script>
 var ctx = document.getElementById('chart_pelat').getContext('2d');
 var tahun_pelatihan = [<?php echo $tahun_pelatihan; ?>];
@@ -962,9 +950,8 @@ document.getElementById("download_pelat").addEventListener('click', function(){
   /*insert chart image url to download button (tag: <a></a>) */
   a.href = url_base64jp;
 });
-
-
 </script>
+
 <script>
 
 $( ".rev3" ).click(function() {
@@ -1016,7 +1003,6 @@ $( ".rev5" ).click(function() {
     });
 
 });
-
 
 $("body").addClass("sidebar-collapse");
 </script>
