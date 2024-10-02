@@ -231,6 +231,13 @@ $t_jdiklat_list->renderListOptions();
 // Render list options (header, left)
 $t_jdiklat_list->ListOptions->render("header", "left");
 ?>
+
+<style>
+	.ew-table-header-caption {
+    text-transform: uppercase;
+}
+</style>
+
 <?php if ($t_jdiklat_list->tahun->Visible) { // tahun ?>
 	<?php if ($t_jdiklat_list->SortUrl($t_jdiklat_list->tahun) == "") { ?>
 		<th data-name="tahun" class="<?php echo $t_jdiklat_list->tahun->headerCellClass() ?>"><div id="elh_t_jdiklat_tahun" class="t_jdiklat_tahun"><div class="ew-table-header-caption"><?php echo $t_jdiklat_list->tahun->caption() ?></div></div></th>
