@@ -284,6 +284,13 @@ $panitia_pelat_list->renderListOptions();
 // Render list options (header, left)
 $panitia_pelat_list->ListOptions->render("header", "left");
 ?>
+
+<style>
+	.ew-table-header-caption {
+    text-transform: uppercase;
+}
+</style>
+
 <?php if ($panitia_pelat_list->tahun->Visible) { // tahun ?>
 	<?php if ($panitia_pelat_list->SortUrl($panitia_pelat_list->tahun) == "") { ?>
 		<th data-name="tahun" class="<?php echo $panitia_pelat_list->tahun->headerCellClass() ?>"><div id="elh_panitia_pelat_tahun" class="panitia_pelat_tahun"><div class="ew-table-header-caption"><?php echo $panitia_pelat_list->tahun->caption() ?></div></div></th>
