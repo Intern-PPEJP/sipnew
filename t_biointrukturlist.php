@@ -280,6 +280,13 @@ $t_biointruktur_list->renderListOptions();
 // Render list options (header, left)
 $t_biointruktur_list->ListOptions->render("header", "left");
 ?>
+
+<style>
+	.ew-table-header-caption {
+    text-transform: uppercase;
+}
+</style>
+
 <?php if ($t_biointruktur_list->bioid->Visible) { // bioid ?>
 	<?php if ($t_biointruktur_list->SortUrl($t_biointruktur_list->bioid) == "") { ?>
 		<th data-name="bioid" class="<?php echo $t_biointruktur_list->bioid->headerCellClass() ?>"><div id="elh_t_biointruktur_bioid" class="t_biointruktur_bioid"><div class="ew-table-header-caption"><?php echo $t_biointruktur_list->bioid->caption() ?></div></div></th>
