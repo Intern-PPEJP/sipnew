@@ -4,12 +4,14 @@
 <head>
 <title><?php echo $Language->projectPhrase("BodyTitle") ?></title>
 <meta charset="utf-8">
+
 <?php if ($ReportExportType != "" && $ReportExportType != "print") { // Stylesheet for exporting reports ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $RELATIVE_PATH ?><?php echo CssFile(Config("PROJECT_STYLESHEET_FILENAME")) ?>">
 <?php if ($ReportExportType == "pdf" && Config("PDF_STYLESHEET_FILENAME")) { ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $RELATIVE_PATH ?><?php echo CssFile(Config("PDF_STYLESHEET_FILENAME")) ?>">
 <?php } ?>
 <?php } ?>
+
 <?php if (!IsExport() || IsExport("print")) { ?>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="<?php echo $RELATIVE_PATH ?>adminlte3/css/<?php echo CssFile("adminlte.css") ?>">
@@ -20,9 +22,11 @@
 <?php if ($CustomExportType == "pdf" && Config("PDF_STYLESHEET_FILENAME")) { ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $RELATIVE_PATH ?><?php echo CssFile(Config("PDF_STYLESHEET_FILENAME")) ?>">
 <?php } ?>
+
 <script src="<?php echo $RELATIVE_PATH ?>js/ewpolyfill.min.js"></script>
 <script src="<?php echo $RELATIVE_PATH ?>js/loadjs.min.js"></script>
 <script src="<?php echo $RELATIVE_PATH ?>js/ewcfg.js"></script>
+
 <script>
 Object.assign(ew, {
 	LANGUAGE_ID: "<?php echo $CurrentLanguage ?>",
@@ -103,6 +107,7 @@ ew.ready("jquery", "<?php echo $RELATIVE_PATH ?>jquery/jquery.ui.widget.min.js",
 ew.loadjs(["<?php echo $RELATIVE_PATH ?>moment/moment.min.js", "<?php echo $RELATIVE_PATH ?>js/Chart.min.js"], "moment");
 </script>
 <?php include_once $RELATIVE_PATH . "ewmenu.php"; ?>
+
 <script>
 var cssfiles = [
 	"<?php echo $RELATIVE_PATH ?>css/Chart.min.css",
@@ -115,6 +120,7 @@ var cssjs = [];
 <?php foreach (array_merge(Config("STYLESHEET_FILES"), Config("JAVASCRIPT_FILES")) as $file) { // External Stylesheets and JavaScripts ?>
 cssjs.push("<?php echo (IsRemote($file) ? "" : $RELATIVE_PATH) . $file ?>");
 <?php } ?>
+
 var jqueryjs = [
 	"<?php echo $RELATIVE_PATH ?>adminlte3/js/adminlte.js",
 	"<?php echo $RELATIVE_PATH ?>bootstrap4/js/bootstrap.bundle.min.js",
@@ -129,6 +135,7 @@ jqueryjs.push("<?php echo $RELATIVE_PATH ?>jquery/jquery.ewjtable.min.js");
 ew.ready(["jquery", "widget", "scrollbars", "moment", "others"], [jqueryjs, "<?php echo $RELATIVE_PATH ?>js/ew.js"], "makerjs");
 ew.ready("makerjs", [cssjs, "<?php echo $RELATIVE_PATH ?>js/userfn.js"], "head");
 </script>
+
 <script>
 loadjs("<?php echo $RELATIVE_PATH ?>css/tempusdominus-bootstrap-4.css");
 ew.ready("head", ["<?php echo $RELATIVE_PATH ?>js/tempusdominus-bootstrap-4.js", "<?php echo $RELATIVE_PATH ?>js/ewdatetimepicker.js"], "datetimepicker");
@@ -149,6 +156,7 @@ loadjs.ready("datetimepicker", function() {
 	});
 });
 </script>
+
 <script>
 loadjs("<?php echo $RELATIVE_PATH ?>timepicker/jquery.timepicker.min.css");
 ew.ready("head", ["<?php echo $RELATIVE_PATH ?>timepicker/jquery.timepicker.min.js", "<?php echo $RELATIVE_PATH ?>js/ewtimepicker.js"], "timepicker");
@@ -163,6 +171,7 @@ ew.ready("head", ["<?php echo $RELATIVE_PATH ?>ckeditor/ckeditor.js", "<?php ech
 #ew-menu { padding-bottom: 33px; }
 .tt-menu { color: #0062cc; } /*input dropdown*/ 
 </style>
+
 <script>
 loadjs.ready("head", function() {
 
@@ -171,8 +180,8 @@ loadjs.ready("head", function() {
 
 });
 </script>
-<script>
 
+<script>
 function startTime() {
 	var today = new Date();
 	var dd = String(today.getDate()).padStart(2, '0');
@@ -193,6 +202,7 @@ function checkTime(i) {
   return i;
 }
 </script>
+
 <!-- Navbar -->
 <script type="text/html" id="navbar-menu-items" class="ew-js-template" data-name="navbar" data-seq="10" data-data="navbar" data-method="appendTo" data-target="#ew-navbar">
 {{if items}}
@@ -216,6 +226,7 @@ function checkTime(i) {
 	{{/for}}
 {{/if}}
 </script>
+
 <!-- Sidebar -->
 <script type="text/html" class="ew-js-template" data-name="menu" data-seq="10" data-data="menu" data-target="#ew-menu">
 {{if items}}
@@ -303,13 +314,16 @@ function checkTime(i) {
 {{/if}}
 </script>
 <?php } ?>
+
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo $RELATIVE_PATH ?>favicon-kemendag.ico">
 <link rel="icon" type="image/x-icon" href="<?php echo $RELATIVE_PATH ?>favicon-kemendag.ico">
 <meta name="generator" content="PHPMaker 2020">
 </head>
+
 <body onload="startTime()" class="<?php echo Config("BODY_CLASS") ?>" dir="<?php echo Config("CSS_FLIP") ? "rtl" : "ltr" ?>">
 <?php if (@!$SkipHeaderFooter) { ?>
 <?php if (!IsExport()) { ?>
+	
 <div class="wrapper ew-layout">
 	<!-- Main Header -->
 	<!-- Navbar -->
