@@ -232,6 +232,15 @@ $t_rkwebinar_list->ListOptions->render("header", "left");
 		</div></div></th>
 	<?php } ?>
 <?php } ?>
+<?php if ($t_rkwebinar_list->narasumber->Visible) { // narasumber ?>
+	<?php if ($t_rkwebinar_list->SortUrl($t_rkwebinar_list->narasumber) == "") { ?>
+		<th data-name="narasumber" class="<?php echo $t_rkwebinar_list->narasumber->headerCellClass() ?>"><div id="elh_t_rkwebinar_narasumber" class="t_rkwebinar_narasumber"><div class="ew-table-header-caption"><?php echo $t_rkwebinar_list->narasumber->caption() ?></div></div></th>
+	<?php } else { ?>
+		<th data-name="narasumber" class="<?php echo $t_rkwebinar_list->narasumber->headerCellClass() ?>"><div class="ew-pointer" onclick="ew.sort(event, '<?php echo $t_rkwebinar_list->SortUrl($t_rkwebinar_list->narasumber) ?>', 1);"><div id="elh_t_rkwebinar_narasumber" class="t_rkwebinar_narasumber">
+			<div class="ew-table-header-btn"><span class="ew-table-header-caption"><?php echo $t_rkwebinar_list->narasumber->caption() ?></span><span class="ew-table-header-sort"><?php if ($t_rkwebinar_list->narasumber->getSort() == "ASC") { ?><i class="fas fa-sort-up"></i><?php } elseif ($t_rkwebinar_list->narasumber->getSort() == "DESC") { ?><i class="fas fa-sort-down"></i><?php } ?></span></div>
+		</div></div></th>
+	<?php } ?>
+<?php } ?>
 <?php
 
 // Render list options (header, right)
@@ -315,6 +324,13 @@ $t_rkwebinar_list->ListOptions->render("body", "left", $t_rkwebinar_list->RowCou
 		<td data-name="tahun" <?php echo $t_rkwebinar_list->tahun->cellAttributes() ?>>
 <span id="el<?php echo $t_rkwebinar_list->RowCount ?>_t_rkwebinar_tahun">
 <span<?php echo $t_rkwebinar_list->tahun->viewAttributes() ?>><?php echo $t_rkwebinar_list->tahun->getViewValue() ?></span>
+</span>
+</td>
+	<?php } ?>
+	<?php if ($t_rkwebinar_list->narasumber->Visible) { // narasumber ?>
+		<td data-name="narasumber" <?php echo $t_rkwebinar_list->narasumber->cellAttributes() ?>>
+<span id="el<?php echo $t_rkwebinar_list->RowCount ?>_t_rkwebinar_narasumber">
+<span<?php echo $t_rkwebinar_list->narasumber->viewAttributes() ?>><?php echo $t_rkwebinar_list->narasumber->getViewValue() ?></span>
 </span>
 </td>
 	<?php } ?>
