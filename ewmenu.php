@@ -18,7 +18,7 @@ echo $topMenu->toScript();
 // Sidebar menu
 $sideMenu = new Menu("menu", TRUE, FALSE);
 $sideMenu->addMenuItem(77, "mi_beranda", $MenuLanguage->MenuPhrase("77", "MenuText"), $MenuRelativePath . "beranda.php", -1, "", AllowListMenu('{046BD04F-8A8B-497E-98E3-47339F0B2FB6}beranda.php'), FALSE, FALSE, "fa-home", "", FALSE);
-$sideMenu->addMenuItem(98, "mi_cv_pelrepes", $MenuLanguage->MenuPhrase("98", "MenuText"), $MenuRelativePath . "cv_pelrepeslist.php", -1, "", AllowListMenu('{046BD04F-8A8B-497E-98E3-47339F0B2FB6}cv_pelrepes'), FALSE, FALSE, "fa-user", "", FALSE);
+//$sideMenu->addMenuItem(98, "mi_cv_pelrepes", $MenuLanguage->MenuPhrase("98", "MenuText"), $MenuRelativePath . "cv_pelrepeslist.php", -1, "", AllowListMenu('{046BD04F-8A8B-497E-98E3-47339F0B2FB6}cv_pelrepes'), FALSE, FALSE, "fa-user", "", FALSE);
 $sideMenu->addMenuItem(19, "mi_t_peserta", $MenuLanguage->MenuPhrase("19", "MenuText"), $MenuRelativePath . "t_pesertalist.php?cmd=resetall", -1, "", AllowListMenu('{046BD04F-8A8B-497E-98E3-47339F0B2FB6}t_peserta'), FALSE, FALSE, "fa-user", "", FALSE);
 $sideMenu->addMenuItem(18, "mi_t_perusahaan", $MenuLanguage->MenuPhrase("18", "MenuText"), $MenuRelativePath . "t_perusahaanlist.php", -1, "", AllowListMenu('{046BD04F-8A8B-497E-98E3-47339F0B2FB6}t_perusahaan'), FALSE, FALSE, "fa-industry", "", FALSE);
 $sideMenu->addMenuItem(280, "mi_t_cp", $MenuLanguage->MenuPhrase("280", "MenuText"), $MenuRelativePath . "t_cplist.php", 18, "", AllowListMenu('{046BD04F-8A8B-497E-98E3-47339F0B2FB6}t_cp'), FALSE, FALSE, "fa fa-circle-o", "", FALSE);
