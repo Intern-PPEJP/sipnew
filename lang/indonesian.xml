@@ -1076,7 +1076,7 @@
       <phrase id="menutext" value="Produk NAFED" />
     </menu>
     <menu id="24">
-      <phrase id="menutext" value="Propinsi" />
+      <phrase id="menutext" value="Provinsi" />
     </menu>
     <menu id="27">
       <phrase id="menutext" value="Skala" />
@@ -1273,7 +1273,7 @@
         <phrase id="fldcaption" value="TGL AKHIR" />
       </field>
       <field id="jmlhari">
-        <phrase id="fldcaption" value="JML. HARI" />
+        <phrase id="fldcaption" value="JUMLAH HARI" />
       </field>
       <field id="kdprop">
         <phrase id="fldcaption" value="PROVINSI" />
@@ -1382,7 +1382,7 @@
         <phrase id="fldcaption" value="KODE" />
       </field>
       <field id="kdprop">
-        <phrase id="fldcaption" value="PROPINSI" />
+        <phrase id="fldcaption" value="PROVINSI" />
       </field>
       <field id="kota">
         <phrase id="fldcaption" value="KABUPATEN/KOTA" />
@@ -1463,10 +1463,10 @@
         <phrase id="fldcaption" value="AKHIR PELATIHAN" />
       </field>
       <field id="tglpel">
-        <phrase id="fldcaption" value="TGL. PELAT." />
+        <phrase id="fldcaption" value="TANGGAL PELATIHAN" />
       </field>
       <field id="kdprop">
-        <phrase id="fldcaption" value="PROPINSI" />
+        <phrase id="fldcaption" value="PROVINSI" />
       </field>
       <field id="kdkota">
         <phrase id="fldcaption" value="KABUPATEN/KOTA" />
@@ -1602,13 +1602,13 @@
         <phrase id="fldcaption" value="TEMPAT" />
       </field>
       <field id="jpeserta">
-        <phrase id="fldcaption" value="JML. PST" />
+        <phrase id="fldcaption" value="JUMLAH PESERTA" />
       </field>
       <field id="jml_hari">
-        <phrase id="fldcaption" value="JML HARI" />
+        <phrase id="fldcaption" value="JJUMLAH HARI" />
       </field>
       <field id="targetpes">
-        <phrase id="fldcaption" value="TRG. PST" />
+        <phrase id="fldcaption" value="TARGET PESERTA" />
       </field>
       <field id="target_peserta">
         <phrase id="fldcaption" value="TARGET PESERTA" />
@@ -1710,7 +1710,7 @@
         <phrase id="fldcaption" value="LOKASI" />
       </field>
       <field id="kdprop">
-        <phrase id="fldcaption" value="PROPINSI" />
+        <phrase id="fldcaption" value="PROVINSI" />
       </field>
       <field id="kdkota">
         <phrase id="fldcaption" value="KABUPATEN/KOTA" />
@@ -1821,7 +1821,7 @@
         <phrase id="fldcaption" value="TEMPAT LAHIR" />
       </field>
       <field id="tlahir">
-        <phrase id="fldcaption" value="TGL LAHIR" />
+        <phrase id="fldcaption" value="TANGGAL LAHIR" />
       </field>
       <field id="usia">
         <phrase id="fldcaption" value="USIA" />
@@ -1837,7 +1837,7 @@
         <phrase id="fldtagcaption2" value="Perempuan" />
       </field>
       <field id="kdprop">
-        <phrase id="fldcaption" value="PROPINSI" />
+        <phrase id="fldcaption" value="PROVINSI" />
       </field>
       <field id="kdkota">
         <phrase id="fldcaption" value="KABUPATEN/KOTA" />
@@ -1882,7 +1882,7 @@
         <phrase id="fldcaption" value="TERAKHIR DIUBAH" />
       </field>
       <field id="jpelatihan">
-        <phrase id="fldcaption" value="JML. PELAT." />
+        <phrase id="fldcaption" value="JUMLAH PELATIHAN" />
       </field>
     </table>
     <table id="t_repeserta">
@@ -1897,7 +1897,7 @@
         <phrase id="fldcaption" value="JUDUL PELATIHAN" />
       </field>
       <field id="tgl_pel">
-        <phrase id="fldcaption" value="TGL. PELATIHAN" />
+        <phrase id="fldcaption" value="TANGGAL PELATIHAN" />
       </field>
       <field id="nama">
         <phrase id="fldcaption" value="CALON PESERTA" />
@@ -2033,12 +2033,12 @@
       </field>
     </table>
     <table id="t_prop">
-      <phrase id="tblcaption" value="Propinsi" />
+      <phrase id="tblcaption" value="Provinsi" />
       <field id="kdprop">
         <phrase id="fldcaption" value="KODE" />
       </field>
       <field id="prop">
-        <phrase id="fldcaption" value="PROPINSI" />
+        <phrase id="fldcaption" value="PROVINSI" />
       </field>
       <field id="kdpropold">
         <phrase id="fldcaption" value="KODE LAMA" />
@@ -2587,7 +2587,7 @@
         <phrase id="fldcaption" value="KODE" />
       </field>
       <field id="kdprop">
-        <phrase id="fldcaption" value="PROPINSI" />
+        <phrase id="fldcaption" value="PROVINSI" />
       </field>
       <field id="kdkota">
         <phrase id="fldcaption" value="KABUPATEN/KOTA" />
@@ -2674,7 +2674,7 @@
         <phrase id="fldcaption" value="AKHIR PELATIHAN" />
       </field>
       <field id="kdprop">
-        <phrase id="fldcaption" value="PROPINSI" />
+        <phrase id="fldcaption" value="PROVINSI" />
       </field>
       <field id="kdkota">
         <phrase id="fldcaption" value="KABUPATEN/KOTA" />
@@ -2811,7 +2811,7 @@
         <phrase id="fldcaption" value="AKHIR PELATIHAN" />
       </field>
       <field id="kdprop">
-        <phrase id="fldcaption" value="PROPINSI" />
+        <phrase id="fldcaption" value="PROVINSI" />
       </field>
       <field id="kdkota">
         <phrase id="fldcaption" value="KABUPATEN/KOTA" />
@@ -2971,7 +2971,7 @@
         <phrase id="fldcaption" value="AKHIR PELATIHAN" />
       </field>
       <field id="kdprop">
-        <phrase id="fldcaption" value="PROPINSI" />
+        <phrase id="fldcaption" value="PROVINSI" />
       </field>
       <field id="kdkota">
         <phrase id="fldcaption" value="KABUPATEN/KOTA" />
@@ -3157,7 +3157,7 @@
         <phrase id="fldtagcaption2" value="Bulan" />
       </field>
       <field id="targetpes">
-        <phrase id="fldcaption" value="TARGET PST" />
+        <phrase id="fldcaption" value="TARGET PESERTA" />
       </field>
       <field id="angkatan">
         <phrase id="fldcaption" value="ANGKATAN" />
@@ -3423,7 +3423,7 @@
         <phrase id="fldcaption" value="REAL PESERTA" />
       </field>
       <field id="kdprop">
-        <phrase id="fldcaption" value="PROPINSI" />
+        <phrase id="fldcaption" value="PROVINSI" />
       </field>
       <field id="independen">
         <phrase id="fldcaption" value="INDEPENDEN" />
@@ -3486,7 +3486,7 @@
         <phrase id="fldcaption" value="NAMA PESERTA" />
       </field>
       <field id="kdprop">
-        <phrase id="fldcaption" value="PROPINSI ASAL PESERTA" />
+        <phrase id="fldcaption" value="PROVINSI ASAL PESERTA" />
       </field>
       <field id="kdkota">
         <phrase id="fldcaption" value="KABUPATEN/KOTA ASAL PESERTA" />
@@ -3514,7 +3514,7 @@
         <phrase id="fldcaption" value="NAMA PERUSAHAAN" />
       </field>
       <field id="kdprop_perusahaan">
-        <phrase id="fldcaption" value="PROPINSI PERUSAHAAN" />
+        <phrase id="fldcaption" value="PROVINSI PERUSAHAAN" />
       </field>
       <field id="kdkota_perusahaan">
         <phrase id="fldcaption" value="KABUPATEN/KOTA PERUSAHAAN" />
@@ -4140,7 +4140,7 @@
         <phrase id="fldcaption" value="ANGKATAN" />
       </field>
       <field id="targetpes">
-        <phrase id="fldcaption" value="TARGET PST" />
+        <phrase id="fldcaption" value="TARGET PESERTA" />
       </field>
       <field id="kontak_person">
         <phrase id="fldcaption" value="KONTAK PERSON" />
@@ -4161,7 +4161,7 @@
         <phrase id="fldcaption" value="KODE PELAT" />
       </field>
       <field id="kdprop">
-        <phrase id="fldcaption" value="PROPINSI" />
+        <phrase id="fldcaption" value="PROVINSI" />
       </field>
       <field id="kdkota">
         <phrase id="fldcaption" value="KABUPATEN/KOTA" />
@@ -4290,7 +4290,7 @@
         <phrase id="fldcaption" value="Judul" />
       </field>
       <field id="tgl">
-        <phrase id="fldcaption" value="Tgl. Pelat." />
+        <phrase id="fldcaption" value="Tanggal Pelatihan" />
       </field>
       <field id="bioid">
         <phrase id="fldcaption" value="Fasilitator" />
@@ -4681,7 +4681,7 @@
         <phrase id="fldcaption" value="WIDYAISWARA" />
       </field>
       <field id="tglpel">
-        <phrase id="fldcaption" value="TGL. PELATIHAN" />
+        <phrase id="fldcaption" value="TANGGAL PELATIHAN" />
       </field>
       <field id="panitia">
         <phrase id="fldcaption" value="PANITIA" />
@@ -4714,7 +4714,7 @@
         <phrase id="fldcaption" value="TEMPAT PELAKSANAAN" />
       </field>
       <field id="jml_peserta">
-        <phrase id="fldcaption" value="JML. PST" />
+        <phrase id="fldcaption" value="JUMLAH PESERTA" />
       </field>
     </table>
     <table id="t_pcp">
@@ -4801,10 +4801,10 @@
         <phrase id="fldtagcaption5" value="&gt; 100" />
       </field>
       <field id="jml_pegawai2">
-        <phrase id="fldcaption" value="JML. PEGAWAI TETAP" />
+        <phrase id="fldcaption" value="JUMLAH PEGAWAI TETAP" />
       </field>
       <field id="jml_pegawai_tidaktetap">
-        <phrase id="fldcaption" value="JML. PEGAWAI TIDAK TETAP" />
+        <phrase id="fldcaption" value="JUMLAH PEGAWAI TIDAK TETAP" />
       </field>
       <field id="legalitas">
         <phrase id="fldcaption" value="LEGALITAS PERUSAHAAN" />
