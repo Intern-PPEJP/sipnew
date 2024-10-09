@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<ew-language date="2023/3/25" version="16.0.0" id="id" name="Indonesian" desc="Indonesian" author="Masino Sinaga">
+<ew-language date="2023/3/25" version="16.0.0" id="id" name="Indonesian" desc="Indonesian"
+  author="Masino Sinaga">
   <!-- 
 *** Important Notes:
 1. Language ID should follow: https://developers.google.com/recaptcha/docs/language,
 2. Locale settings are placed in a separate locale files under the "locales" folder,
-3. Locale files must be named with language ID of language file (and converted to lowercase), e.g. en.json,
-4. Locale files are ALWAYS used, regardless of whether the project is single language or multiple language.
+3. Locale files must be named with language ID of language file (and converted to lowercase), e.g.
+  en.json,
+4. Locale files are ALWAYS used, regardless of whether the project is single language or multiple
+  language.
 -->
   <global>
     <phrase id="accept" value="Terima" />
@@ -123,7 +126,8 @@
     <!-- v12 -->
     <phrase id="confirmpassword" value="Konfirmasikan kata sandi" />
     <phrase id="conflictcancellink" value="Batal" />
-    <phrase id="cookieconsentsummary" value="Gunakan halaman ini untuk menampilkan kebijakan privasi dan penggunaan cookie." />
+    <phrase id="cookieconsentsummary"
+      value="Gunakan halaman ini untuk menampilkan kebijakan privasi dan penggunaan cookie." />
     <!-- v2019 -->
     <phrase id="copy" value="Salin" />
     <phrase id="copylink" value="Salin" class="icon-copy ew-icon" />
@@ -160,7 +164,8 @@
     <!-- v2019 -->
     <phrase id="deletesuccess" value="Penghapusan berhasil" />
     <phrase id="detaillink" value="" />
-    <phrase id="detailcount" value="&lt;span class='badge badge-info ew-detail-count%c'&gt;%c&lt;/span&gt;" />
+    <phrase id="detailcount"
+      value="&lt;span class='badge badge-info ew-detail-count%c'&gt;%c&lt;/span&gt;" />
     <!-- v2019 -->
     <phrase id="downloadbtn" value="Unduh" />
     <!-- v2019 -->
@@ -188,11 +193,15 @@
     <phrase id="entervalidatecode" value="Masukkan kode validasi seperti yang terlihat" client="1" />
     <!-- v11 -->
     <phrase id="entersenderemail" value="Masukkan surel pengirim" client="1" />
-    <phrase id="enterpropersenderemail" value="Melebihi jumlah surel maksimum atau alamat surel tidak benar" client="1" />
+    <phrase id="enterpropersenderemail"
+      value="Melebihi jumlah surel maksimum atau alamat surel tidak benar" client="1" />
     <phrase id="enterrecipientemail" value="Masukkan surel penerima" client="1" />
-    <phrase id="enterproperrecipientemail" value="Melebihi jumlah maksimum surel penerima atau alamat surel tidak benar" client="1" />
-    <phrase id="enterproperccemail" value="Melebihi jumlah surel cc maksimum atau alamat surel tidak benar" client="1" />
-    <phrase id="enterproperbccemail" value="Melebihi jumlah surel bcc maksimum atau alamat surel tidak benar" client="1" />
+    <phrase id="enterproperrecipientemail"
+      value="Melebihi jumlah maksimum surel penerima atau alamat surel tidak benar" client="1" />
+    <phrase id="enterproperccemail"
+      value="Melebihi jumlah surel cc maksimum atau alamat surel tidak benar" client="1" />
+    <phrase id="enterproperbccemail"
+      value="Melebihi jumlah surel bcc maksimum atau alamat surel tidak benar" client="1" />
     <phrase id="entersubject" value="Masukkan subjek" client="1" />
     <phrase id="emailformsender" value="Dari" />
     <phrase id="emailformrecipient" value="Kepada" />
@@ -208,7 +217,8 @@
     <phrase id="enteruid" value="Masukkan ID Pengguna" client="1" />
     <phrase id="entervalidemail" value="Masukkan alamat surel yang valid" client="1" />
     <phrase id="exactphrase" value="Frase yang sama" />
-    <phrase id="exceedmaxretry" value="Melebihi jumlah maksimum usaha login. Akun terkunci. Coba lagi dalam %t menit" />
+    <phrase id="exceedmaxretry"
+      value="Melebihi jumlah maksimum usaha login. Akun terkunci. Coba lagi dalam %t menit" />
     <phrase id="exceedmaxemailexport" value="Melebihi jumlah maksimum email ekspor. Coba lagi nanti" />
     <phrase id="exportchart" value="Sedang mengekspor grafik: " client="1" />
     <!-- v2020 (report) -->
@@ -220,7 +230,8 @@
     <!-- v2019 -->
     <phrase id="exporting" value="Sedang mengekspor, mohon tunggu..." client="1" />
     <!-- v2018 -->
-    <phrase id="exportingchart" value="Sedang mengekspor grafik (%c dari %t), mohon tunggu..." client="1" />
+    <phrase id="exportingchart" value="Sedang mengekspor grafik (%c dari %t), mohon tunggu..."
+      client="1" />
     <!-- v2020 (report) -->
     <phrase id="exporttocsv" value="Ekspor ke CSV" class="icon-csv ew-icon" />
     <!-- v11 -->
@@ -256,7 +267,8 @@
     <!-- v12 -->
     <phrase id="filters" value="Penyaringan" class="icon-filter ew-icon" />
     <!-- v12 -->
-    <phrase id="forgotpasswordresponse" value="Anda akan menerima instruksi pemulihan kata sandi sebentar lagi jika alamat surel Anda sudah terdaftar." />
+    <phrase id="forgotpasswordresponse"
+      value="Anda akan menerima instruksi pemulihan kata sandi sebentar lagi jika alamat surel Anda sudah terdaftar." />
     <!-- v2019 -->
     <phrase id="forgotpwd" value="Lupa Kata Sandi" client="1" />
     <!-- v2020 -->
@@ -291,7 +303,8 @@
     <!-- v2019 -->
     <phrase id="importbtn" value="Impor" />
     <!-- v2019 -->
-    <phrase id="importmessageerror1" value="Telah diimpor %c dari %t data dari %f (berhasil: %s, gagal: %e)" client="1" />
+    <phrase id="importmessageerror1"
+      value="Telah diimpor %c dari %t data dari %f (berhasil: %s, gagal: %e)" client="1" />
     <!-- v2019 -->
     <phrase id="importmessageerror2" value=", galat: %e" client="1" />
     <!-- v2019 -->
@@ -309,11 +322,13 @@
     <!-- v2019 -->
     <phrase id="importmessagenoheaderrow" value="Tidak ada bagian header untuk impor" />
     <!-- v2019 -->
-    <phrase id="importmessageprogress" value="Sedang mengimpor %c dari %t data dari %f..." client="1" />
+    <phrase id="importmessageprogress" value="Sedang mengimpor %c dari %t data dari %f..."
+      client="1" />
     <!-- v2019 -->
     <phrase id="importmessageservererror" value="Galat server %s: %t" client="1" />
     <!-- v2019 -->
-    <phrase id="importmessagesuccess" value="Telah diimpor %c dari %t data dari %f berhasil" client="1" />
+    <phrase id="importmessagesuccess" value="Telah diimpor %c dari %t data dari %f berhasil"
+      client="1" />
     <!-- v2019 -->
     <phrase id="importmessageuploaderror" value="Gagal mengunggah %f: %s" client="1" />
     <!-- v2019 -->
@@ -510,7 +525,8 @@
     <!-- v12 -->
     <phrase id="passwordrequest" value="Permintaan Kata Sandi" />
     <phrase id="passwordchanged" value="Kata Sandi Sudah Diganti" />
-    <phrase id="passwordexpired" value="Kata Sandi Sudah Habis Masa Lakunya. Silahkan ganti kata sandi." />
+    <phrase id="passwordexpired"
+      value="Kata Sandi Sudah Habis Masa Lakunya. Silahkan ganti kata sandi." />
     <phrase id="passwordstrength" value="Kekuatan: %p" client="1" />
     <!-- v12 -->
     <phrase id="passwordtoosimple" value="Kata sandi Anda terlalu sederhana" client="1" />
@@ -539,15 +555,18 @@
     <!-- v2018 -->
     <phrase id="personaldatabtn" value="Data Pribadi" />
     <!-- v2019 -->
-    <phrase id="personaldatacontent" value="Akun Anda mengandung data pribadi yang telah Anda berikan kepada kami. Halama ini mengijinkan Anda untuk mengunduh atau menghapus data tersebut." />
+    <phrase id="personaldatacontent"
+      value="Akun Anda mengandung data pribadi yang telah Anda berikan kepada kami. Halama ini mengijinkan Anda untuk mengunduh atau menghapus data tersebut." />
     <!-- v2019 -->
-    <phrase id="personaldatadeletefailure" value="Kesalahan tidak diharapkan terjadi saat menghapus data pengguna" />
+    <phrase id="personaldatadeletefailure"
+      value="Kesalahan tidak diharapkan terjadi saat menghapus data pengguna" />
     <!-- v2019 -->
     <phrase id="personaldatadeletesuccess" value="Data pribadi telah berhasil dihapus" />
     <!-- v2019 -->
     <phrase id="personaldatatitle" value="Data Pribadi" />
     <!-- v2019 -->
-    <phrase id="personaldatawarning" value="Menghapus data ini akan menghapus akun Anda selamanya, dan ini tidak dapat dikembalikan lagi kemudian." />
+    <phrase id="personaldatawarning"
+      value="Menghapus data ini akan menghapus akun Anda selamanya, dan ini tidak dapat dikembalikan lagi kemudian." />
     <!-- v2019 -->
     <phrase id="pickdate" value="Pilih sebuah tanggal" />
     <phrase id="pleaseselect" value="Silahkan pilih" client="1" />
@@ -561,7 +580,8 @@
     <phrase id="printerfriendlytext" value="Ramah Cetakan" />
     <phrase id="privacypolicy" value="Kebijakan Privasi" />
     <!-- v2019 -->
-    <phrase id="privacypolicycontent" value="Gunakan halaman ini untuk menjelaskan kebijakan privasi situs Anda." />
+    <phrase id="privacypolicycontent"
+      value="Gunakan halaman ini untuk menjelaskan kebijakan privasi situs Anda." />
     <!-- v2019 -->
     <phrase id="qtr1" value="Kuartal Pertama" />
     <!-- v2020 (report) -->
@@ -591,7 +611,8 @@
     <!-- v11 -->
     <phrase id="record" value="Rekor" client="1" />
     <!-- v2017 -->
-    <phrase id="recordchangedbyotheruser" value="Data telah diubah oleh pengguna lain. Klik [Muat Ulang] untuk mengambil data yang sudah diubah (data Anda di form ini akan ditimpa) atau klik [Timpa] untuk menimpa data yang sudah diubah." />
+    <phrase id="recordchangedbyotheruser"
+      value="Data telah diubah oleh pengguna lain. Klik [Muat Ulang] untuk mengambil data yang sudah diubah (data Anda di form ini akan ditimpa) atau klik [Timpa] untuk menimpa data yang sudah diubah." />
     <phrase id="recorddeleted" value="data telah dihapus" />
     <phrase id="recordinserted" value="data telah ditambahkan" />
     <phrase id="recordupdated" value="data telahd diperbarui" />
@@ -601,10 +622,13 @@
     <!-- v2020 -->
     <phrase id="registerbtn" value="Daftarkan" />
     <phrase id="registersuccess" value="Pendaftaran berhasil" />
-    <phrase id="registersuccessactivate" value="Pendaftaran berhasil. Sistem sudah mengirimkan surel ke alamat surel Anda, klik tautan di dalam surel tersebut untuk mengaktivasi akun Anda." />
+    <phrase id="registersuccessactivate"
+      value="Pendaftaran berhasil. Sistem sudah mengirimkan surel ke alamat surel Anda, klik tautan di dalam surel tersebut untuk mengaktivasi akun Anda." />
     <phrase id="registerpage" value="Pendaftaran" />
-    <phrase id="relatedrecordrequired" value="Anda tidak dapat menambah atau mengubah data karena nilai kunci luar tidak terdapat di dalam tabel master '%t'. Silahkan melakukan logout dan login kembali!" />
-    <phrase id="relatedrecordexists" value="Anda tidak dapat menghapus data karena data terkait terdapat di tabel detail '%t'" />
+    <phrase id="relatedrecordrequired"
+      value="Anda tidak dapat menambah atau mengubah data karena nilai kunci luar tidak terdapat di dalam tabel master '%t'. Silahkan melakukan logout dan login kembali!" />
+    <phrase id="relatedrecordexists"
+      value="Anda tidak dapat menghapus data karena data terkait terdapat di tabel detail '%t'" />
     <phrase id="reloadbtn" value="Muat Ulang" client="1" />
     <!-- v2017 -->
     <phrase id="reloadlink" value="Muat Ulang" />
@@ -618,9 +642,11 @@
     <!-- v2020 -->
     <phrase id="resendregisteremailbtn" value="Kirim ulang surel pendaftaran" />
     <!-- v12 -->
-    <phrase id="resendregisteremailsuccess" value="Surel pendaftaran untuk pengguna '%u' telah dikirim ulang" />
+    <phrase id="resendregisteremailsuccess"
+      value="Surel pendaftaran untuk pengguna '%u' telah dikirim ulang" />
     <!-- v12 -->
-    <phrase id="resendregisteremailfailure" value="Gagal mengirim ulang surel pendaftaran untuk pengguna '%u'" />
+    <phrase id="resendregisteremailfailure"
+      value="Gagal mengirim ulang surel pendaftaran untuk pengguna '%u'" />
     <!-- v12 -->
     <phrase id="reset" value="Reset" />
     <phrase id="resetallfilter" value="Reset semua penyaringan" class="icon-reset-search ew-icon" />
@@ -681,15 +707,19 @@
     <phrase id="sequencenumber" value="%s." />
     <phrase id="servercommunicationerror" value="Terjadi kesalahan saat menghubungi server." />
     <!-- v2017 -->
-    <phrase id="sessionwillexpire" value="Sesi Anda akan habis masa berlakunya dalam %s detik. Klik OK untuk melanjutkan sesi Anda." client="1" />
+    <phrase id="sessionwillexpire"
+      value="Sesi Anda akan habis masa berlakunya dalam %s detik. Klik OK untuk melanjutkan sesi Anda."
+      client="1" />
     <!-- v12 -->
     <phrase id="sessionexpired" value="Sesi Anda sudah habis masa berlakunya." client="1" />
     <!-- v12 -->
     <phrase id="setpasswordexpiredbtn" value="Ubah kata sandi menjadi kadaluarsa" />
     <!-- v12 -->
-    <phrase id="setpasswordexpiredsuccess" value="Kata sandi untuk pengguna '%u' telah diubah menjadi kadaluarsa" />
+    <phrase id="setpasswordexpiredsuccess"
+      value="Kata sandi untuk pengguna '%u' telah diubah menjadi kadaluarsa" />
     <!-- v12 -->
-    <phrase id="setpasswordexpiredfailure" value="Gagal mengubah kata sandi untuk pengguna '%u' menjadi kadaluarsa" />
+    <phrase id="setpasswordexpiredfailure"
+      value="Gagal mengubah kata sandi untuk pengguna '%u' menjadi kadaluarsa" />
     <!-- v12 -->
     <phrase id="showallbtn" value="Tampilkan semua" class="icon-reset-search ew-icon" />
     <!-- v11 -->
@@ -715,9 +745,12 @@
     <phrase id="top" value="Atas" />
     <!-- v2020 (report) -->
     <phrase id="total" value="Total" />
-    <phrase id="unauthorizeduserid" value="Pengguna ini (%c) tidak diotorisasi untuk menugaskan ID Pengguna (%u)." />
-    <phrase id="unauthorizedparentuserid" value="Pengguna ini (%c) tidak diotorisasi untuk menugaskan ID Pengguna induk (%p)." />
-    <phrase id="unauthorizedmasteruserid" value="Pengguna ini (%c) tidak diotorisasi untuk menambahkan data. Penyaringan Master: %f" />
+    <phrase id="unauthorizeduserid"
+      value="Pengguna ini (%c) tidak diotorisasi untuk menugaskan ID Pengguna (%u)." />
+    <phrase id="unauthorizedparentuserid"
+      value="Pengguna ini (%c) tidak diotorisasi untuk menugaskan ID Pengguna induk (%p)." />
+    <phrase id="unauthorizedmasteruserid"
+      value="Pengguna ini (%c) tidak diotorisasi untuk menambahkan data. Penyaringan Master: %f" />
     <phrase id="update" value="Ubah" />
     <phrase id="updatebtn" value="Ubah" client="1" />
     <!-- v2017 -->
@@ -735,23 +768,28 @@
     <phrase id="uploadcancel" value="Batal" client="1" />
     <phrase id="uploaddelete" value="Hapus" client="1" />
     <phrase id="uploadoverwrite" value="Timpa berkas lama?" client="1" />
-    <phrase id="uploaderrmsg1" value="Berkas yang diunggah melewati nilai pengaturan upload_max_filesize di dalam php.ini" />
-    <phrase id="uploaderrmsg2" value="Berkas yang diunggah melewati nilai MAX_FILE_SIZE yang ditentukan dalam form HTML" />
+    <phrase id="uploaderrmsg1"
+      value="Berkas yang diunggah melewati nilai pengaturan upload_max_filesize di dalam php.ini" />
+    <phrase id="uploaderrmsg2"
+      value="Berkas yang diunggah melewati nilai MAX_FILE_SIZE yang ditentukan dalam form HTML" />
     <phrase id="uploaderrmsg3" value="Berkas yang diunggah hanya sebagian yang berhasil" />
     <phrase id="uploaderrmsg4" value="Tidak ada berkas yang diunggah" />
     <phrase id="uploaderrmsg6" value="Folder sementara tidak ada" />
     <phrase id="uploaderrmsg7" value="Gagal menulis berkas ke disk" />
     <phrase id="uploaderrmsg8" value="Sebuah PHP extension menghentikan pengunggahan berkas" />
-    <phrase id="uploaderrmsgpostmaxsize" value="Berkas yang diunggah melewati nilai post_max_size directive di php.ini" />
+    <phrase id="uploaderrmsgpostmaxsize"
+      value="Berkas yang diunggah melewati nilai post_max_size directive di php.ini" />
     <phrase id="uploaderrmsgmaxfilesize" value="Berkas terlalu besar" client="1" />
     <phrase id="uploaderrmsgminfilesize" value="Berkas terlalu kecil" client="1" />
     <phrase id="uploaderrmsgacceptfiletypes" value="Tipe berkas tidak diijinkan" client="1" />
-    <phrase id="uploaderrmsgmaxnumberoffiles" value="Jumlah maksimum berkas telah terlampaui" client="1" />
+    <phrase id="uploaderrmsgmaxnumberoffiles" value="Jumlah maksimum berkas telah terlampaui"
+      client="1" />
     <phrase id="uploaderrmsgmaxwidth" value="Lebar maksimum gambar telah terlampaui" />
     <phrase id="uploaderrmsgminwidth" value="Gambar membutuhkan lebar minimum" />
     <phrase id="uploaderrmsgmaxheight" value="Tinggi maksimum gambar telah terlampaui" />
     <phrase id="uploaderrmsgminheight" value="Gambar membutuhkan tinggi minimum" />
-    <phrase id="uploaderrmsgmaxfilelength" value="Total panjang nama berkas melebihi lebar ruas" client="1" />
+    <phrase id="uploaderrmsgmaxfilelength" value="Total panjang nama berkas melebihi lebar ruas"
+      client="1" />
     <phrase id="useradministrator" value="Administrator" client="1" />
     <!-- v12 -->
     <phrase id="useranonymous" value="Anonymous" client="1" />
@@ -761,19 +799,26 @@
     <phrase id="useremail" value="Surel" />
     <phrase id="userexists" value="Pengguna sudah ada" />
     <phrase id="userlevel" value="Level Pengguna: " />
-    <phrase id="userleveladministratorname" value="Nama level pengguna untuk level pengguna -1 harus 'Administrator'" client="1" />
-    <phrase id="userlevelanonymousname" value="Nama level pengguna untuk level pengguna -2 harus 'Anonymous'" client="1" />
+    <phrase id="userleveladministratorname"
+      value="Nama level pengguna untuk level pengguna -1 harus 'Administrator'" client="1" />
+    <phrase id="userlevelanonymousname"
+      value="Nama level pengguna untuk level pengguna -2 harus 'Anonymous'" client="1" />
     <!-- v12 -->
     <phrase id="userlevelpermission" value="Hak Akses Level Pengguna" />
     <phrase id="userlevelidinteger" value="ID Level Pengguna harus bertipe Integer" client="1" />
-    <phrase id="userleveldefaultname" value="Nama level pengguna untuk level pengguna 0 harus 'Default'" client="1" />
-    <phrase id="userlevelidincorrect" value="ID Level Pengguna yang didefinisikan oleh pengguna harus lebih besar dari 0" client="1" />
-    <phrase id="userlevelnameincorrect" value="Nama Level Pengguna yang didefinisikan oleh pengguna tidak boleh sama dengan 'Administrator' atau 'Default'" client="1" />
+    <phrase id="userleveldefaultname"
+      value="Nama level pengguna untuk level pengguna 0 harus 'Default'" client="1" />
+    <phrase id="userlevelidincorrect"
+      value="ID Level Pengguna yang didefinisikan oleh pengguna harus lebih besar dari 0" client="1" />
+    <phrase id="userlevelnameincorrect"
+      value="Nama Level Pengguna yang didefinisikan oleh pengguna tidak boleh sama dengan 'Administrator' atau 'Default'"
+      client="1" />
     <phrase id="userloggedin" value="Pengguna '%u' sudah tercatat masuk" />
     <phrase id="username" value="Nama Pengguna" />
     <phrase id="usernotfound" value="Pengguna '%u' tidak ditemukan" />
     <!-- v2018 -->
-    <phrase id="userprofilecorrupted" value="Profil pengguna korup. Silahkan logout lalu login kembali" />
+    <phrase id="userprofilecorrupted"
+      value="Profil pengguna korup. Silahkan logout lalu login kembali" />
     <phrase id="valuenotexist" value="Nilai tidak ada" client="1" />
     <!-- v11 -->
     <phrase id="view" value="Tampilkan" />
@@ -899,7 +944,8 @@
       <phrase id="menutext" value="Riwayat Pekerjaan" />
     </menu>
     <menu id="102">
-      <phrase id="menutext" value="&lt;i class='glyphicon glyphicon-list-alt'&gt;&lt;/i&gt; Evaluasi Nilai Fasilitator" />
+      <phrase id="menutext"
+        value="&lt;i class='glyphicon glyphicon-list-alt'&gt;&lt;/i&gt; Evaluasi Nilai Fasilitator" />
     </menu>
     <menu id="642">
       <phrase id="menutext" value="Daftar Peserta Coaching Program" />
@@ -944,7 +990,8 @@
       <phrase id="menutext" value="Pelatihan" />
     </menu>
     <menu id="100">
-      <phrase id="menutext" value="&lt;i class='glyphicon glyphicon-blackboard'&gt;&lt;/i&gt; Jadwal Pelatihan" />
+      <phrase id="menutext"
+        value="&lt;i class='glyphicon glyphicon-blackboard'&gt;&lt;/i&gt; Jadwal Pelatihan" />
     </menu>
     <menu id="636">
       <phrase id="menutext" value="Webinar" />
@@ -956,7 +1003,8 @@
       <phrase id="menutext" value="Judul Pelatihan" />
     </menu>
     <menu id="74">
-      <phrase id="menutext" value="&lt;i class='glyphicon glyphicon-list-alt'&gt;&lt;/i&gt; Kurikulum" />
+      <phrase id="menutext"
+        value="&lt;i class='glyphicon glyphicon-list-alt'&gt;&lt;/i&gt; Kurikulum" />
     </menu>
     <menu id="638">
       <phrase id="menutext" value="Daftar Peserta Webinar" />
@@ -1139,7 +1187,8 @@
       <phrase id="menutext" value="Pelatihan Kerjasama Dengan Universitas" />
     </menu>
     <menu id="94">
-      <phrase id="menutext" value="&lt;i class=&quot;glyphicon glyphicon-list-alt&quot;&gt;&lt;/i&gt; Rencana Program" />
+      <phrase id="menutext"
+        value="&lt;i class=&quot;glyphicon glyphicon-list-alt&quot;&gt;&lt;/i&gt; Rencana Program" />
     </menu>
     <menu id="104">
       <phrase id="menutext" value="v kurikulum" />
@@ -1157,16 +1206,19 @@
       <phrase id="menutext" value="t faskur" />
     </menu>
     <menu id="93">
-      <phrase id="menutext" value="&lt;i class='glyphicon glyphicon-user'&gt;&lt;/i&gt; Rekrutmen Peserta" />
+      <phrase id="menutext"
+        value="&lt;i class='glyphicon glyphicon-user'&gt;&lt;/i&gt; Rekrutmen Peserta" />
     </menu>
     <menu id="97">
-      <phrase id="menutext" value="&lt;i class='glyphicon glyphicon-blackboard'&gt;&lt;/i&gt; Jadwal Pelatihan" />
+      <phrase id="menutext"
+        value="&lt;i class='glyphicon glyphicon-blackboard'&gt;&lt;/i&gt; Jadwal Pelatihan" />
     </menu>
     <menu id="54">
       <phrase id="menutext" value="user" />
     </menu>
     <menu id="55">
-      <phrase id="menutext" value="&lt;i class='glyphicon glyphicon-refresh'&gt;&lt;/i&gt; Ganti Kata Sandi" />
+      <phrase id="menutext"
+        value="&lt;i class='glyphicon glyphicon-refresh'&gt;&lt;/i&gt; Ganti Kata Sandi" />
     </menu>
     <menu id="56">
       <phrase id="menutext" value="&lt;i class='glyphicon glyphicon-log-out'&gt;&lt;/i&gt; Logout" />
