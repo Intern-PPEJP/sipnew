@@ -29,7 +29,7 @@
 		</li>
 	</script>
 	<script type="text/html" class="ew-js-template" data-name="myControlSidebar" data-method="insertBefore" data-target="#ew-navbar-right" data-seq="10">
-		<span data-widget="pushmenu" href="#" style="color:#343a40">
+		<span data-widget="pushmenu" href="#" style="color:#11101D">
 		<?php
 			$me_level = "ADMINISTRATOR";
 			if(CurrentUserName() <> "admin"){
